@@ -119,27 +119,33 @@ main {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 }
 
-.card, .card > img {
+.card,
+.card > img {
     border-radius: 5%;
 }
 
 .card-content {
-    padding: 1em .6em;
+    padding: 1em 0.6em;
 }
 
 .card-content > h1 {
-    margin: .5em .4em;
+    margin: 0.5em 0.4em;
     font: var(--font-bold);
     font-size: 1.5em;
     color: var(--clr-card-heading);
 }
 
 .card-content > p {
-    padding: .5em;
+    padding: 0.5em;
     color: var(--clr-card-text);
 }
 
-footer {
-    text-align: center;
+.attribution {
     margin: 1em auto;
+    font-size: 11px;
+    text-align: center;
 }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+

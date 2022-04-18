@@ -117,8 +117,10 @@ body {
     background-color: var(--clr-main-bg);
 }
 
+/* main section */
+
 main {
-    max-width: 475px;
+    max-width: 425px;
     margin: 0 auto;
 }
 
@@ -227,8 +229,14 @@ hr {
     margin-right: 1em;
 }
 
+/* footer section */
+
 .attribution {
-    text-align: center;
     margin: 1em auto;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
