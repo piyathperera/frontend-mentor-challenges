@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 1em/1.5 'Outfit', sans-serif;
+}
+
+details {
+    cursor: pointer;
+}
+
+a {
+    color: #0000EE;
+}
