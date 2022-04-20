@@ -61,7 +61,6 @@ I would like add more structure in html and use a css methodology like BEM, CUBE
 ### Useful resources
 
 - [Custom properties - CSS Tricks](https://css-tricks.com/a-complete-guide-to-custom-properties/) | [Color & Custom Properties](https://www.youtube.com/watch?v=HxJnvCOC2vQ) - These helped me for to understand custom css variables. I used this for defining base collors and fonts for this project. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
