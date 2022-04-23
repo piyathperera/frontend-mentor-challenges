@@ -1,0 +1,238 @@
+/* CSS variables */
+:root {
+    /* base colors */
+    --clr-pink: hsl(322, 100%, 66%);
+    --clr-light-pink: hsl(321, 100%, 78%);
+    --clr-light-red: hsl(0, 100%, 63%);
+    --clr-dark-cyan: hsl(192, 100%, 9%);
+    --clr-pale-blue: hsl(207, 100%, 98%);
+
+    --text-color: var(--clr-dark-cyan);
+    --button-color: var(--clr-pink);
+    --button-text-color: var(--clr-pale-blue);
+    --button-hover-color: var(--clr-light-pink);
+    --error-color: var(--clr-light-red);
+}
+
+/* END of CSS variables */
+
+/* CSS reset by Andy Bell
+https://piccalil.li/blog/a-modern-css-reset/
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* END of CSS reset */
+
+/* Global CSS */
+
+.sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+body {
+    font: normal 1em/1.6 "Open Sans", sans-serif;
+    color: var(--text-color);
+    flex: auto;
+}
+
+main {
+    max-inline-size: max-content;
+    margin-inline: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+header .logo {
+    width: 120px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    font: inherit;
+    font-weight: 700;
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    border: 2px solid var(--button-color);
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    /* color: var(--button-color); */
+}
+
+.button-outline {
+    font-weight: normal;
+    background-color: transparent;
+    --button-color: var(--clr-light-pink);
+    --button-text-color: var(--clr-light-pink);
+}
+
+
+.intro {
+    margin-top: 4rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.intro > * + * {
+    margin-top: 2rem;
+}
+
+.intro img,
+p,
+a {
+    margin: auto;
+}
+
+.intro p {
+    max-width: 55ch;
+    /* text-align: center; */
+}
+
+.intro img {
+    margin-top: 4rem;
+}
+
+.intro .intro-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+/* .features {
+    display: flex;
+    flex-direction: column;
+} */
+
+.features section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 1rem;
+    text-align: left;
+
+    /* flex-wrap: wrap; */
+}
+
+.features section img {
+    max-width: 60ch;
+}
+
+.features__content p {
+    max-width: 55ch;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--text-color);
+    color: var(--clr-pale-blue);
+}
+
+footer > section {
+    max-inline-size: max-content;
+    margin-inline: auto;
+}
+
+footer a {
+    color: var(--clr-pale-blue);
+}
+
+footer p {
+    max-width: 50ch;
+}

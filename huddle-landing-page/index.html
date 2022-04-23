@@ -25,89 +25,102 @@
     </head>
     <body>
         <header>
-            <h1>Huddle</h1>
+            <h1 class="sr-only">Huddle</h1>
             <img
+                class="logo"
                 src="images/logo.svg"
                 alt="Message icon with the word Huddle next to it."
             />
-            <a href="#">Try it Free</a>
+            <a class="button button-outline" href="#">Try it Free</a>
         </header>
         <main>
-            <section>
+            <section class="intro">
                 <h2>Build The Community Your Fans Will Love</h2>
                 <p>
                     Huddle re-imagines the way we build communities. You have a
                     voice, but so does your audience. Create connections with
                     your users as you engage in genuine discussion.
                 </p>
-                <a href="">Get Started For Free</a
+                <a class="button" href="">Get Started For Free</a
                 ><img
                     src="images/screen-mockups.svg"
                     alt="screen mockups of a desktop and mobile layout."
                 />
+
+                <div class="intro-stats">
+                    <div>
+                        <img src="images/icon-communities.svg" alt="" />
+                        <span>1.4k+</span>
+                        <p>Communities Formed</p>
+                    </div>
+                    <div>
+                        <img src="images/icon-messages.svg" alt="" /><span
+                            >2.7m+</span
+                        >
+                        <p>Messages Sent</p>
+                    </div>
+                </div>
             </section>
 
             <section>
                 <!-- sr only -->
-                <h2>Social Proof</h2>
-                <div>
-                    <img src="images/icon-communities.svg" alt="" />
-                    <span>1.4k+</span>
-                    <p>Communities Formed</p>
-                </div>
-                <div>
-                    <img src="images/icon-messages.svg" alt="" /><span
-                        >2.7m+</span
-                    >
-                    <p>Messages Sent</p>
-                </div>
+                <h2 class="sr-only">Huddle current status</h2>
             </section>
 
-            <section>
-                <h2>Grow Together</h2>
-                <p>
-                    Generate meaningful discussions with your audience and build
-                    a strong, loyal community. Think of the insightful
-                    conversations you miss out on with a feedback form.
-                </p>
-                <img
-                    src="images/illustration-grow-together.svg"
-                    alt="illustration of man and woman with a background of message mockups"
-                />
-            </section>
+            <div class="features">
+                <section>
+                    <div class="features__content">
+                      <h2>Grow Together</h2>
+                    <p>
+                        Generate meaningful discussions with your audience and
+                        build a strong, loyal community. Think of the insightful
+                        conversations you miss out on with a feedback form.
+                    </p>
+                    </div>
+                    <img
+                        src="images/illustration-grow-together.svg"
+                        alt="illustration of man and woman with a background of message mockups"
+                    />
+                </section>
 
-            <section>
-                <h2>Flowing Conversations</h2>
-                <p>
-                    You wouldn't paginate a conversation in real life, so why do
-                    it online? Our threads have just-in-time loading for a more
-                    natural flow.
-                </p>
-                <img
-                    src="images/illustration-flowing-conversation.svg"
-                    alt="illustration of a group people sitting around a table having a conversation"
-                />
-            </section>
-            <section>
-                <h2>Your Users</h2>
-                <p>
-                    It takes no time at all to integrate Huddle with your app's
-                    authentication solution. This means, once signed in to your
-                    app, your users can start chatting immediately.
-                </p>
-                <img
-                    src="images/illustration-your-users.svg"
-                    alt="illustration of two men and a woman looking at a large mockup of a message. "
-                />
-            </section>
+                <section>
+                  <div class="features__content">
+                    <h2>Flowing Conversations</h2>
+                    <p>
+                        You wouldn't paginate a conversation in real life, so
+                        why do it online? Our threads have just-in-time loading
+                        for a more natural flow.
+                    </p>
+                  </div>
+                    <img
+                        src="images/illustration-flowing-conversation.svg"
+                        alt="illustration of a group people sitting around a table having a conversation"
+                    />
+                </section>
+                <section>
+                  <div class="features__content">
+                    <h2>Your Users</h2>
+                    <p>
+                        It takes no time at all to integrate Huddle with your
+                        app's authentication solution. This means, once signed
+                        in to your app, your users can start chatting
+                        immediately.
+                    </p>
+                    </div>
+                    <img
+                        src="images/illustration-your-users.svg"
+                        alt="illustration of two men and a woman looking at a large mockup of a message. "
+                    />
+                </section>
+            </div>
 
-            <section>
+            <section class="intro">
                 <h2>Ready To Build Your Community?</h2>
-                <a href="#">Get Started For Free</a>
+                <a class="button" href="#">Get Started For Free</a>
             </section>
         </main>
         <footer>
-            <section>
+            <section class="company_info">
                 <!-- sr only -->
                 <h3>Huddle</h3>
                 <img src="images/logo.svg" alt="" />
@@ -130,13 +143,28 @@
                     </p>
                 </address>
                 <ul>
-                    <li><a href=""><img src="./images/logo-facebook.svg" alt=""> Facebook</a></li>
-                    <li><a href=""><img src="./images/logo-instagram.svg" alt=""> Instagram</a></li>
-                    <li><a href=""><img src="./images/logo-twitter.svg" alt=""> Twitter</a></li>
+                    <li>
+                        <a href=""
+                            ><img src="./images/logo-facebook.svg" alt="" />
+                            Facebook</a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><img src="./images/logo-instagram.svg" alt="" />
+                            Instagram</a
+                        >
+                    </li>
+                    <li>
+                        <a href=""
+                            ><img src="./images/logo-twitter.svg" alt="" />
+                            Twitter</a
+                        >
+                    </li>
                 </ul>
             </section>
 
-            <section>
+            <section class="newsletter">
                 <h3>Newsletter</h3>
                 <p>
                     To recieve tips on how to grow your community, sign up to
@@ -144,19 +172,19 @@
                     your email address
                 </p>
                 <input type="text" name="email" id="email" /><input
+                    class="button"
                     type="submit"
                     value="Subscribe"
                 />
             </section>
-
-            <p class="attribution">
-                Challenge by
-                <a
-                    href="https://www.frontendmentor.io?ref=challenge"
-                    target="_blank"
-                    >Frontend Mentor</a
-                >. Coded by <a href="#">Piyath Perera</a>.
-            </p>
         </footer>
+        <p class="attribution">
+          Challenge by
+          <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+          >. Coded by <a href="#">Piyath Perera</a>.
+      </p>
     </body>
 </html>
