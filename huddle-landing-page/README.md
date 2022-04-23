@@ -91,6 +91,20 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
+responsive images - w3Schools
+https://www.w3schools.com/howto/howto_css_image_responsive.asp
+
+https://www.freecodecamp.org/news/css-responsive-image-tutorial/
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+
+Responsive layout without media queries (sort of)
+https://twitter.com/meyerweb/status/1517152715121471491
+
+
+
+
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 

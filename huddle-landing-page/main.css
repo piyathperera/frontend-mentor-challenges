@@ -132,21 +132,26 @@ header .logo {
     width: 120px;
 }
 
-a {
+header a, main a, footer a {
     cursor: pointer;
     text-decoration: none;
+}
+
+h1, h2, h3 {
+    font: normal 1em/1.6 "Poppins", sans-serif;
 }
 
 .button {
     display: inline-block;
     font: inherit;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--button-text-color);
     background-color: var(--button-color);
     border: 2px solid var(--button-color);
-    padding: 0.5rem 2rem;
+    padding: .75rem 2.5rem;
     margin: 0.5rem;
     border-radius: 2rem;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 20%);
     /* color: var(--button-color); */
 }
 
@@ -157,21 +162,45 @@ a {
     --button-text-color: var(--clr-light-pink);
 }
 
+.button-rounded-square {
+    /* margin: 1rem 1.5rem; */
+    padding: .5rem 2.5rem;
+    border-radius: .5rem;
+}
+
+.button:hover {
+    --button-color: var(--clr-light-pink);
+}
+
+.button-outline:hover {
+    opacity: .7;
+}
 
 .intro {
     margin-top: 4rem;
-    padding: 0 1rem;
+    margin-bottom: 4rem;
+    padding: 0 1.5rem;
     text-align: center;
 }
 
 .intro > * + * {
+    /* background-color: cadetblue; */
     margin-top: 2rem;
 }
 
+/* .intro > * + * {
+    margin-top: 2rem;
+} */
+
 .intro img,
-p,
-a {
-    margin: auto;
+.intro p,
+.intro a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro h2 {
+    font-size: 2em;
 }
 
 .intro p {
@@ -185,16 +214,26 @@ a {
 
 .intro .intro-stats {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem;
 }
 
-/* .features {
-    display: flex;
-    flex-direction: column;
-} */
+.intro-stats img {
+    width: 36px;
+    margin-left: 2rem;
+}
+
+.intro-stats p {
+    color: hsla(0, 0%, 0%, .5);
+    margin-bottom: 2rem;
+}
+
+.intro-stats span {
+    padding: 0 2rem;
+    font-weight: 700;
+    font-size: 3.5em;
+}
 
 .features section {
     display: flex;
@@ -203,23 +242,47 @@ a {
     margin: auto;
     padding: 1rem;
     text-align: left;
-
-    /* flex-wrap: wrap; */
 }
 
 .features section img {
-    max-width: 60ch;
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    margin: auto;
+    padding: 4rem 0;
+    /* background-size: auto 50%; */
+}
+
+.features__content {
+    /* background-color: lightblue; */
+    margin: auto;
+}
+
+.features__content h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
 }
 
 .features__content p {
     max-width: 55ch;
 }
 
+@media screen and (max-width: 70em) {
+    .features__content h2, .intro h2 {
+        font-size: 1.75rem;
+    }
+
+    .features section {
+        margin: auto;
+        text-align: center;
+    }
+}
+
 footer {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 10rem 1rem 1rem 1rem;
     background-color: var(--text-color);
     color: var(--clr-pale-blue);
 }
@@ -227,12 +290,95 @@ footer {
 footer > section {
     max-inline-size: max-content;
     margin-inline: auto;
+    margin-top: 3rem;
 }
 
 footer a {
     color: var(--clr-pale-blue);
 }
 
-footer p {
-    max-width: 50ch;
+.svg--white {
+    width: 180px;
+    filter: invert(1)
+    sepia(1)
+    hue-rotate(200deg)
+    saturate(0)
+    brightness(100);
 }
+
+
+.company_info p {
+    margin: 1.5rem 0;
+    max-width: 40ch;
+}
+
+.company-contact img {
+    display: inline;
+    padding-right: .5rem;
+}
+
+.social-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.social-links img {
+    width: 36px;
+}
+
+.newsletter {
+    width: 100%;
+}
+
+.newsletter > * + * {
+    margin-top: 1.5rem;
+}
+
+.newsletter h3 {
+    font-size: 1.75em;
+}
+
+.newsletter p {
+    max-width: 40ch;
+}
+
+.newsletter-input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-input input[name="email"] {
+    max-width: 100%;
+    padding: .5rem 2.5rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+}
+
+@media screen and (max-width: 40em) {
+    .newsletter-input input[name="email"] {
+        /* background-color: aquamarine; */
+        width: 100%;
+    }
+}
+
+.attribution {
+    padding: 1rem;
+    font-size: 11px;
+    text-align: center;
+    background-color: var(--text-color);
+    color: var(--clr-pale-blue);
+}
+
+.attribution a {
+    color: var(--clr-pink)
+}
+
+
+
+

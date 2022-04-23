@@ -62,20 +62,16 @@
                 </div>
             </section>
 
-            <section>
-                <!-- sr only -->
-                <h2 class="sr-only">Huddle current status</h2>
-            </section>
-
             <div class="features">
                 <section>
                     <div class="features__content">
-                      <h2>Grow Together</h2>
-                    <p>
-                        Generate meaningful discussions with your audience and
-                        build a strong, loyal community. Think of the insightful
-                        conversations you miss out on with a feedback form.
-                    </p>
+                        <h2>Grow Together</h2>
+                        <p>
+                            Generate meaningful discussions with your audience
+                            and build a strong, loyal community. Think of the
+                            insightful conversations you miss out on with a
+                            feedback form.
+                        </p>
                     </div>
                     <img
                         src="images/illustration-grow-together.svg"
@@ -84,28 +80,28 @@
                 </section>
 
                 <section>
-                  <div class="features__content">
-                    <h2>Flowing Conversations</h2>
-                    <p>
-                        You wouldn't paginate a conversation in real life, so
-                        why do it online? Our threads have just-in-time loading
-                        for a more natural flow.
-                    </p>
-                  </div>
+                    <div class="features__content">
+                        <h2>Flowing Conversations</h2>
+                        <p>
+                            You wouldn't paginate a conversation in real life,
+                            so why do it online? Our threads have just-in-time
+                            loading for a more natural flow.
+                        </p>
+                    </div>
                     <img
                         src="images/illustration-flowing-conversation.svg"
                         alt="illustration of a group people sitting around a table having a conversation"
                     />
                 </section>
                 <section>
-                  <div class="features__content">
-                    <h2>Your Users</h2>
-                    <p>
-                        It takes no time at all to integrate Huddle with your
-                        app's authentication solution. This means, once signed
-                        in to your app, your users can start chatting
-                        immediately.
-                    </p>
+                    <div class="features__content">
+                        <h2>Your Users</h2>
+                        <p>
+                            It takes no time at all to integrate Huddle with
+                            your app's authentication solution. This means, once
+                            signed in to your app, your users can start chatting
+                            immediately.
+                        </p>
                     </div>
                     <img
                         src="images/illustration-your-users.svg"
@@ -122,16 +118,17 @@
         <footer>
             <section class="company_info">
                 <!-- sr only -->
-                <h3>Huddle</h3>
-                <img src="images/logo.svg" alt="" />
+                <h3 class="sr-only">Huddle</h3>
+                <img class="svg--white" src="./images/logo-white.svg" alt="">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices
                     quis sem.
                 </p>
-                <address>
+                <address class="company-contact">
                     <p>
-                        <img src="./images/icon-phone.svg" alt="" /> Phone:
+                        <img src="./images/icon-phone.svg" alt="" />
+                        Phone:
                         <a href="tel:+1-543-123-4567">+1-543-123-4567</a>
                     </p>
 
@@ -142,23 +139,21 @@
                         >
                     </p>
                 </address>
-                <ul>
+                <ul class="social-links">
                     <li>
                         <a href=""
-                            ><img src="./images/logo-facebook.svg" alt="" />
-                            Facebook</a
+                            ><img class="svg--white" src="./images/logo-facebook.svg" alt="" /></a
                         >
                     </li>
                     <li>
                         <a href=""
-                            ><img src="./images/logo-instagram.svg" alt="" />
-                            Instagram</a
+                            ><img
+                            class="svg--white"  src="./images/logo-instagram.svg" alt="" /></a
                         >
                     </li>
                     <li>
                         <a href=""
-                            ><img src="./images/logo-twitter.svg" alt="" />
-                            Twitter</a
+                            ><img class="svg--white svg--twitter" src="./images/logo-twitter.svg" alt="" /></a
                         >
                     </li>
                 </ul>
@@ -171,20 +166,22 @@
                     our weekly newsletter. We’ll never send you spam or pass on
                     your email address
                 </p>
-                <input type="text" name="email" id="email" /><input
-                    class="button"
+                <form action="#" class="newsletter-input">
+                    <input type="email" name="email" id="email" size="30"/><input
+                    class="button button-rounded-square"
                     type="submit"
                     value="Subscribe"
                 />
+                </form>
             </section>
         </footer>
         <p class="attribution">
-          Challenge by
-          <a
-              href="https://www.frontendmentor.io?ref=challenge"
-              target="_blank"
-              >Frontend Mentor</a
-          >. Coded by <a href="#">Piyath Perera</a>.
-      </p>
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Piyath Perera</a>.
+        </p>
     </body>
 </html>
