@@ -1,0 +1,209 @@
+:root {
+    --clr-soft-red: hsl(7, 99%, 70%);
+    --clr-yellow: hsl(51, 100%, 49%);
+    --clr-dark-cyan: hsl(167, 40%, 24%);
+    --clr-light-cyan: hsl(168, 34%, 41%);
+    --clr-dark-blue: hsl(198, 62%, 26%);
+
+    --clr-very-dark-blue: hsl(212, 27%, 19%);
+    --clr-darker-blue-gray: hsl(213, 9%, 39%);
+    --clr-dark-blue-gray: hsl(232, 10%, 55%);
+    --clr-blue-gray: hsl(210, 4%, 67%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --clr-service-content: pink;
+    
+
+    --font-body: normal 1.125em/1.5 "Barlow", sans-serif;
+    --font-body-link: normal 1.125em/1.5 "Fraunces", sans-serif;
+    --font-heading-2: 900 2em/1.1 "Fraunces", sans-serif;
+    --font-heading-3: bold 1.75em/1.1 "Fraunces", sans-serif;
+    --font-heading-4: bold 1.5em/1.4 "Fraunces", sans-serif;
+    --font-heading-5: bold 1.125em/1.5 "Fraunces", sans-serif;
+    
+}
+
+body {
+    font: var(--font-body);
+}
+/* needs to simplified with variables */
+/* h1,h2,h3,h4 {
+    font: var(--font-heading-2);
+} */
+
+a {
+    text-decoration: none;
+}
+
+.sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.hero__header img {
+    margin-right: 2rem;
+}
+
+.header__nav-list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.header__nav-list a {
+    color: var(--clr-white);
+}
+
+.header__nav-list--btn a {
+    font: var(--font-body-link);
+    background-color: var(--clr-white);
+    color: var(--clr-dark-blue);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+}
+
+.hero__content {
+    /* background-color: lightblue; */
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.content__title {
+    color: var(--clr-white);
+    font: var(--font-heading-2);
+    font-size: 3em;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    padding: 2.5rem;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: 1fr;
+    place-items: center;
+}
+
+.feature__content {
+    padding: 0 8rem;
+    color: var(--clr-dark-blue-gray);
+}
+
+.feature__content h2 {
+    font: var(--font-heading-2);
+    color: var(--clr-very-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.feature__content p {
+    margin-bottom: 2rem;
+}
+
+.feature__content a {
+    font: var(--font-heading-5);
+    color: var(--clr-very-dark-blue);
+    text-transform: uppercase;
+    text-decoration: solid underline var(--clr-yellow) 10px;
+
+    /* opacity: .5; */
+}
+
+.feature__img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.reverse {
+    order: 1;
+}
+
+/* .feature__content {
+    order: 1;
+} */
+
+@media screen and (max-width: 40em)  {
+    .feature__content {
+        order: 1;
+    }
+
+    .feature__img {
+        order:0;
+    }
+}
+
+.centerish {
+    max-inline-size: fit-content;
+    margin-inline: auto;
+}
+
+.service {
+    background-color: bisque;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.service__content {
+    color: var(--clr-service-content);
+    /* background-color: lightblue; */
+    /* min-height: 8em; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 10%;
+    /* left: 50%;
+    transform: translate(-50%, 0); */
+}
+
+.service__content[data-color='cyan'] {
+    --clr-service-content: var(--clr-dark-cyan);
+}
+
+.service__content[data-color='blue'] {
+    --clr-service-content: var(--clr-dark-blue);
+}
+
+.service__content h3 {
+    font: var(--font-heading-4);
+    margin-bottom: 1rem;
+}
+
+.service__content p {
+    padding: 0 3rem;
+}

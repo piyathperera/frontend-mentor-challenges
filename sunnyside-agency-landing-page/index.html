@@ -12,7 +12,16 @@
             href="./images/favicon-32x32.png"
         />
 
-      <link rel="stylesheet" href="css/reset.css" media="screen">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/reset.css" media="screen" />
+
+        <link rel="stylesheet" href="css/main.css" media="screen" />
 
         <title>Frontend Mentor | Sunnyside agency landing page</title>
 
@@ -29,29 +38,35 @@
     </head>
     <body>
         <!-- Header and Nav -->
-        <header>
-            <h1>Sunnyside</h1>
-            <img
-                src="./images/logo.svg"
-                alt="logo represents the letters of sunnyside"
-            />
-            <nav>
-                <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
+        <header class="hero">
+            <div class="hero__header">
+                <h1 class="sr-only">Sunnyside</h1>
+                <img
+                    class="header__img"
+                    src="./images/logo.svg"
+                    alt="logo represents the letters of sunnyside"
+                />
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Projects</a></li>
+                        <li class="header__nav-list--btn">
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <section class="hero__content">
+                <h2 class="content__title">We are creatives</h2>
+                <img src="./images/icon-arrow-down.svg" alt="arrow down icon" />
+            </section>
         </header>
 
         <!-- Main -->
         <main>
-            <section>
-                <h1>We are creatives</h1>
-            </section>
-
-            <section>
+            <section class="feature">
                 <div class="feature__content">
                     <h2>Transform your brand</h2>
                     <p>
@@ -70,8 +85,8 @@
                 </div>
             </section>
 
-            <section>
-                <div class="feature__content">
+            <section class="feature">
+                <div class="feature__content reverse">
                     <h2>Stand out to the right audience</h2>
                     <p>
                         Using a collaborative formula of designers, researchers,
@@ -80,14 +95,19 @@
                     </p>
                     <a href="">Learn more</a>
                 </div>
-                <div class="feature__img"><img src="./images/desktop/image-stand-out.jpg" alt="picture of a light red colored matte finish wine glass on a light red color background" /></div>
+                <div class="feature__img">
+                    <img
+                        src="./images/desktop/image-stand-out.jpg"
+                        alt="picture of a light red colored matte finish wine glass on a light red color background"
+                    />
+                </div>
             </section>
 
-            <section>
+            <section class="feature">
                 <!-- Added a common heading for A11Y -->
-                <h2>Services</h2>
+                <h2 class="sr-only">Services</h2>
                 <div class="service">
-                    <div class="service__content">
+                    <div class="service__content" data-color="cyan">
                         <h3>Graphic design</h3>
                         <p>
                             Great design makes you memorable. We deliver artwork
@@ -103,7 +123,7 @@
                 </div>
 
                 <div class="service">
-                    <div class="service__content">
+                    <div class="service__content" data-color="blue">
                         <h3>Photography</h3>
                         <p>
                             Increase your credibility by getting the most
