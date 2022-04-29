@@ -279,3 +279,25 @@ a {
 .service__content p {
     padding: 0 3rem;
 }
+
+.testimonal__section {
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+.testimonial__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+}
+
+.testimonial__card {
+    background-color: khaki;
+    max-width: 30ch;
+}
+
+.testimonial__card img {
+    max-width: 25%;
+}
