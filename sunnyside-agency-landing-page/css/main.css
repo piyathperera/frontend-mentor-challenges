@@ -1,6 +1,10 @@
 :root {
+    --opacity-half: .5;
+
     --clr-soft-red: hsl(7, 99%, 70%);
+    --clr-soft-red-a5: hsl(7, 99%, 70%, var(--opacity-half));
     --clr-yellow: hsl(51, 100%, 49%);
+    --clr-yellow-a5: hsla(51, 100%, 49%, var(--opacity-half));
     --clr-dark-cyan: hsl(167, 39%, 25%);
     --clr-light-cyan: hsl(168, 34%, 41%);
     --clr-lighter-cyan: hsl(167, 44%, 70%);
@@ -92,11 +96,17 @@ a {
 
 .header__nav-list--btn a {
     font: var(--font-body-link);
+    font-size: 1em;
     background-color: var(--clr-white);
     color: var(--clr-dark-blue);
     padding: 1rem 2rem;
     border-radius: 50px;
     text-transform: uppercase;
+}
+
+.header__nav-list--btn a:hover {
+    background-color: hsla(0, 0%, 100%, .3);
+    color: var(--clr-white);
 }
 
 .hero__header #menu-btn, .header__menu-icon {
@@ -175,11 +185,7 @@ a {
     
 
 
-    /* Toggle menu */
-    /* .hero__header input:checked ~ .header__nav {
-        background-color: aqua;
-        display: block;
-    } */
+/* Toggle menu */
 
 .hero__header input:checked ~ .test {
         display: block;
@@ -190,11 +196,6 @@ a {
 
     .hero__header input:checked ~ .header__nav {
         display: block;
-    }
-
-    .hero__header input:checked ~ ,.header__menu-icon {
-        color: #008;
-        background-color: brown;
     }
 }
 
@@ -319,13 +320,22 @@ a {
     font: var(--font-heading-5);
     color: var(--clr-very-dark-blue);
     text-transform: uppercase;
-    text-decoration: solid underline var(--clr-yellow) 10px;
-
-    /* opacity: .5; */
+    text-decoration: solid underline var(--clr-yellow-a5) 10px;
+    text-underline-offset: -0.4em;
+    text-decoration-skip-ink: none;
+    /* text-decoration-color: var(--clr-yellow-a5); */
 }
 
 .feature__content a.soft-red {
+    text-decoration: solid underline var(--clr-soft-red-a5) 10px;
+}
+
+.feature__content a.soft-red:hover {
     text-decoration: solid underline var(--clr-soft-red) 10px;
+}
+
+.feature__content a:hover {
+    text-decoration: solid underline var(--clr-yellow) 10px;
 }
 
 .feature__img {
@@ -558,6 +568,15 @@ a {
 
 .footer__content a {
     color: var(--clr-light-cyan);
+}
+
+.footer__content a:hover {
+    color: var(--clr-white);
+}
+
+.social__links img:hover {
+    cursor: pointer;
+    filter: invert(1) sepia(1) hue-rotate(200deg) saturate(0) brightness(100);
 }
 
 .attribution {
