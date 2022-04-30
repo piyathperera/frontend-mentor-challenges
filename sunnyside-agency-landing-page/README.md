@@ -1,20 +1,20 @@
 # Frontend Mentor - QR code component solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The Challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+-   [Overview](#overview)
+    -   [The Challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -22,66 +22,66 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 Your users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+-   View the optimal layout for the site depending on their device's screen size
+-   See hover states for all interactive elements on the page
 
 ### Screenshot
 
 ![](./images/Screenshot_1440.png)
 
-
 <!-- ![](./images/Screenshot_1440_full.png) -->
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/solutions/qr-code-component-using-html-and-css-rkkG2nDVc)
-- [Live Site](https://frontend-mentor-challeneges.netlify.app/huddle-landing-page/)
+-   [Solution](https://www.frontendmentor.io/solutions/qr-code-component-using-html-and-css-rkkG2nDVc)
+-   [Live Site](https://frontend-mentor-challeneges.netlify.app/sunnyside-agency-landing-page/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
+-   CSS Grid
 
 ### What I learned
 
-I learned to use minimum breakpoints to simplify the layouts while adding responsiveness with mobile and desktop with media queries.
+I learned to create shapes with css, some help with ::after pseudo class for mobile screen navigation menu.
 
-Improving readbility of the website with just two lines of CSS.
+Use of CSS Grid with a mix of Flexbox to achieve responsive layout blocks.
 
-Adding SVG curves to differentiate sections and add some color and shape to the design.
-
-
+Learn to create responsive images with aspect-ratio and object-fit.
 
 ```css
-@media screen and (max-width: 70em) {
-    .features__content h2,
-    .intro h2 {
-        font-size: 1.75rem;
-    }
-
-    .features section .centerish {
-        margin: auto;
-        text-align: center;
-    }
-}
-```
-```css
-.centerish {
-    max-inline-size: max-content;
-    margin-inline: auto;
+.header__nav::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 32px solid var(--clr-white);
+    border-left: 32px solid transparent;
+    content: "";
 }
 ```
 
-```html
+```css
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+}
+```
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path
-                        fill="#00252e"
-                        fill-opacity="1"
-                        d="M0,320L60,277.3C120,235,240,149,360,117.3C480"
-                    ></path></svg>
+```css
+.feature__img img {
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
 ```
 
 ### Continued development
@@ -92,15 +92,15 @@ Learning to add css animations to elements of the website.
 
 ### Useful resources
 
-- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) | [SVG Waves Generator](https://getwaves.io/) - These helped me for to understand SVG elements. How to add them to html, style them with css and using a generator to creator custom wavy svg image for sections and footer.
+-   [Responsive images - web.dev](https://web.dev/learn/design/responsive-images/) - These helped me for to understand responsive design for images. It clearly outlined step by step approach to make images responsive.
 
-- [CSS Image Overlay - W3schools](https://www.w3schools.com/howto/howto_css_image_overlay_title.asp) - This helped me to understand how to add overlay to an image.
+-   [CSS shapes - CSS Tricks](https://css-tricks.com/the-shapes-of-css/) - This helped me to understand how to add shapes with css.
 
 ## Author
 
-- Website - [Piyath Perera](https://piyathperera.netlify.app)
-- Frontend Mentor - [@piyathperera](https://www.frontendmentor.io/profile/piyathperera)
-- Twitter - [@PiyathPerera](https://www.twitter.com/PiyathPerera)
+-   Website - [Piyath Perera](https://piyathperera.netlify.app)
+-   Frontend Mentor - [@piyathperera](https://www.frontendmentor.io/profile/piyathperera)
+-   Twitter - [@PiyathPerera](https://www.twitter.com/PiyathPerera)
 
 ## Acknowledgments
 
