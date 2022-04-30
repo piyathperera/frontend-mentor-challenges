@@ -53,7 +53,7 @@ a {
 /* HEADER */
 
 .hero {
-    height: 80vh;
+    height: 100vh;
     background-image: url("../images/desktop/image-header.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -188,19 +188,10 @@ a {
 
 
 /* Toggle menu */
-
-.hero__header input:checked ~ .test {
-        display: block;
-        padding: 1rem;
-        background-color: skyblue;
-        z-index: 88888888;
-    }
-
     .hero__header input:checked ~ .header__nav {
         display: block;
     }
 }
-
 
 .hero__content {
     display: flex;
@@ -208,7 +199,7 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 4rem;
+    gap: 3rem;
     margin: 3rem auto;
 }
 
