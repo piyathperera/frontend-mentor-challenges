@@ -324,6 +324,10 @@ a {
     /* opacity: .5; */
 }
 
+.feature__content a.soft-red {
+    text-decoration: solid underline var(--clr-soft-red) 10px;
+}
+
 .feature__img {
     background-color: lightseagreen;
 }
@@ -350,7 +354,9 @@ a {
 
 @media screen and (max-width: 42.5em) {
     .feature__content {
+        padding: 3rem 1rem;
         order: 1;
+        text-align: center;
     }
 
     .feature__img {
