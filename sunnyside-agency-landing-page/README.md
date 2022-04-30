@@ -34,7 +34,7 @@ Dekstop
 
 ### Links
 
--   [Solution](https://www.frontendmentor.io/solutions/qr-code-component-using-html-and-css-rkkG2nDVc)
+-   [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-with-css-grid-and-flexbox-HyMoJC9Hc)
 -   [Live Site](https://frontend-mentor-challeneges.netlify.app/sunnyside-agency-landing-page/)
 
 ## My process
@@ -50,10 +50,6 @@ Dekstop
 
 I learned to create shapes with css, some help with ::after pseudo class for mobile screen navigation menu.
 
-Use of CSS Grid with a mix of Flexbox to achieve responsive layout blocks.
-
-Learn to create responsive images with aspect-ratio and object-fit.
-
 ```css
 .header__nav::after {
     position: absolute;
@@ -67,6 +63,8 @@ Learn to create responsive images with aspect-ratio and object-fit.
 }
 ```
 
+Use of CSS Grid with a mix of Flexbox to achieve responsive layout blocks
+
 ```css
 .feature {
     display: grid;
@@ -76,11 +74,25 @@ Learn to create responsive images with aspect-ratio and object-fit.
 }
 ```
 
+Learn to create responsive images with aspect-ratio and object-fit. I also found a [Solution in CSS Tricks article](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again) for bug in css aspect ratio in firefox.
+
+
+```html
+<img
+    width="720"
+    height="894"
+    src="./images/desktop/image-gallery-milkbottles.jpg"
+    alt="picture of milk bottles on a blue background with clouds"
+/>
+```
+
 ```css
-.feature__img img {
+.gallery__section img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: attr(width) / attr(height);
     max-inline-size: 100%;
     block-size: auto;
-    aspect-ratio: 1/1;
     object-fit: cover;
 }
 ```
