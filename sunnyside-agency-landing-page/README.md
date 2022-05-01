@@ -27,7 +27,7 @@ Your users should be able to:
 
 ### Screenshot
 
-![Desktop layout](./images/Screenshot_1440.png)
+![Desktop layout](./images/screenshot_1440.png)
 Dekstop
 
 <!-- ![Mobile layout](./images/Screenshot_375.png) Mobile -->
