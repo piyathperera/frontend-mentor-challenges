@@ -31,8 +31,8 @@ Your users should be able to:
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/solutions/qr-code-component-using-html-and-css-rkkG2nDVc)
-- [Live Site](https://frontend-mentor-challeneges.netlify.app/qr-code-component-main/)
+- [Solution](https://www.frontendmentor.io/solutions/nft-preview-card-component-html-css-ryf-LJo45)
+- [Live Site](https://frontend-mentor-challeneges.netlify.app/nft-preview-card-component/)
 
 ## My process
 
