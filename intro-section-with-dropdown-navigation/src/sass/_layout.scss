@@ -1,0 +1,56 @@
+// Global
+body {
+    font: $font-primary;
+}
+
+// Header / Navigation
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+.nav {
+    display: none;
+    background-color: skyblue;
+
+    // &__list {
+    //     display: flex;
+    //     list-style-type: none;
+    // }
+
+    // &__list ul {
+    //     list-style-type: square;
+    // }
+    
+}
+
+
+// Main
+
+.hero {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.hero__content {
+    background-color: lightgreen;
+}
+
+.hero__content > * + * {
+    margin: 1rem auto;
+}
+
+.hero__image {
+    background-color: lightpink;
+}
+.hero__image img {
+    width: auto;
+    max-inline-size: 100%;
+    block-size: auto;
+    // aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+// Footer
