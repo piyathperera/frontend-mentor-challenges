@@ -68,62 +68,63 @@
                 </ul>
             </nav> -->
 
-            <button class="btn__menu"><img src="./assets/images/icon-menu.svg" alt="icon menu"></button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li>
-                        <a href="#">
-                            <h2>Features</h2>
-                            <ul>
-                                <li>
-                                    <a href="#"
-                                        ><img
-                                            src="./assets/images/icon-todo.svg"
-                                            alt="todo icon"
-                                        />Todo List</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        ><img
-                                            src="./assets/images/icon-calendar.svg"
-                                            alt="calendar icon"
-                                        />Calendar</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        ><img
-                                            src="./assets/images/icon-reminders.svg"
-                                            alt="reminder icon"
-                                        />Reminders</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        ><img
-                                            src="./images/icon-planning.svg"
-                                            alt="planning icon"
-                                        />Planning</a
-                                    >
-                                </li>
-                            </ul>
-                        </a>
+            <!-- <button type="button" class="button__menu">
+                <img src="./assets/images/icon-menu.svg" alt="icon menu" />
+            </button> -->
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button
+                        class="dropdown__title" type="button">Features</button>
+                        <ul class="dropdown__menu menu__align menu__align--left">
+                            <li>
+                                <a href="#">
+                                    <img
+                                        src="./assets/images/icon-todo.svg"
+                                        alt="todo icon"
+                                    />
+                                    <span>Todo List</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="./assets/images/icon-calendar.svg"
+                                        alt="calendar icon"
+                                    />Calendar</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="./assets/images/icon-reminders.svg"
+                                        alt="reminder icon"
+                                    />Reminders</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="./assets/images/icon-planning.svg"
+                                        alt="planning icon"
+                                    />Planning</a
+                                >
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="#">
-                            <h2>Company</h2>
-                            <ul>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>
-                        </a>
+                    <li class="dropdown">
+                        <button
+                        class="dropdown__title" type="button">Company</button>
+                        <ul class="dropdown__menu menu__align  menu__align--right">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
                     </li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="#" class="button button--secondary">Register</a></li>
                 </ul>
             </nav>
         </header>
@@ -137,7 +138,7 @@
                         Streamline processes, create team rituals, and watch
                         productivity soar.
                     </p>
-                    <a href="#">Learn more</a>
+                    <a class="button button--primary" href="#">Learn more</a>
                     <ul>
                         <li>
                             <img
