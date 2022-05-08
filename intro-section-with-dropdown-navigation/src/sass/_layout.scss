@@ -14,13 +14,26 @@ body {
 nav {
     flex-grow: 1;
 
+    @media screen and (max-width: 55em) {
+        background: steelblue;
+        position: fixed;
+        inset: 0 0 0 35%;
+        padding: 6rem 2rem;
+
+        .mobile-nav__toggle {
+            background-color: aquamarine;
+        }
+    }
+
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
 
-        li:nth-child(5) {
-            margin-left: auto;
+        @media screen and (min-width: 55em) {
+            li:nth-child(5) {
+                margin-left: auto;
+            }
         }
     }
 
@@ -28,6 +41,10 @@ nav {
         display: flex;
         align-items: center;
         gap: 2rem;
+
+        @media screen and (max-width: 55em) {
+            flex-direction: column;
+        }
 
         > li {
             a,
@@ -40,9 +57,11 @@ nav {
     }
 
     .dropdown {
-        position: relative;
-        // display: flex;
-        // align-content: flex-start;
+        @media screen and (max-width: 40em) {
+            position: unset;
+        }
+
+        // position: relative;
 
         .dropdown__menu {
             // outline: 1px solid hotpink;
@@ -50,7 +69,7 @@ nav {
             margin-top: 1.5rem;
             padding: 1rem 0rem;
             border-radius: 4px;
-            box-shadow: .1em 0.15em .15em 0.25em rgba(black, 0.25);
+            box-shadow: 0.1em 0.15em 0.15em 0.25em rgba(black, 0.25);
 
             transform: rotateX(-90deg) translateX(-50%);
             transform-origin: top center;
@@ -72,6 +91,8 @@ nav {
             left: $left;
             transform: translateX(-50%);
 
+           
+
             &--right {
                 width: 13ch;
                 // $left: 10%;
@@ -84,14 +105,37 @@ nav {
             }
         }
 
+        @media screen and (max-width: 55em) {
+            .menu__align {
+                position: unset;
+                $left: 0;
+                transform: unset;
+            }
+
+            &--left {
+                left: 0%;
+                // background-color: lightblue;
+            }
+        }
+
         &:hover,
         &:focus-within {
-          .dropdown__menu {
-            opacity: 1;
-            transform: rotateX(0) translateX(-50%);
-            visibility: visible;
-          }
+            .dropdown__menu {
+                opacity: 1;
+                transform: rotateX(0) translateX(-50%);
+                visibility: visible;
+            }
+
+            @media screen and (max-width: 55em) {
+                .dropdown__menu {
+                    opacity: 1;
+                     transform: rotateX(0) translateX(-50%);
+                    visibility: visible;
+                }
+            }
         }
+
+
     }
 }
 
