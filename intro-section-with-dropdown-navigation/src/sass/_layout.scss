@@ -31,6 +31,7 @@ header {
 
 nav {
     flex-grow: 1;
+    
 
     #toggle {
         display: none;
@@ -43,6 +44,7 @@ nav {
     #menu {
         background-color: bisque;
         display: flex;
+        align-items: center;
         flex: 1;
         gap: var(--gap, 2rem);
 
@@ -54,6 +56,18 @@ nav {
         & li:nth-child(4) {
             // background-color: lightcoral;
             margin-right: auto;
+        }
+
+        li {
+          a + button svg {
+            background-color: lightgreen;
+            transition: transform .25s ease-in;
+            transform-origin: center 45%;
+          }
+
+          button[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+          }
         }
     }
 }
@@ -78,12 +92,17 @@ nav {
             position: fixed;
             inset: 0 0 0 30%;
             flex-direction: column;
+            align-items: flex-start;
             padding: min(30vh, 5rem) 2rem;
             margin: 0;
             z-index: 1000;
 
             transform: translateX(100%);
             transition: transform 300ms ease-out;
+
+            ul.is-active {
+              display: block;
+            }
         }
 
         #menu[data-visible="true"] {

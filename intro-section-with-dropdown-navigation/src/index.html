@@ -41,7 +41,7 @@
                 src="./assets/images/logo.svg"
                 alt="logo image of company snap"
             />
-            <nav role="navigation">
+            <nav id="Nav" role="navigation">
                 <button id="toggle" aria-controls="menu" aria-expanded="false">
                     <img src="./assets/images/icon-menu.svg" alt="" /><span
                         class="sr-only"
@@ -49,9 +49,30 @@
                     >
                 </button>
                 <ul id="menu" data-visible="false">
-                    <li class="test-li">
+                    <li>
                         <a href="">Features</a>
-                        <ul class="test-focus-within">
+                        <button
+                            id="btnFeature"
+                            class="expanded-button"
+                            aria-controls="id_features_menu"
+                            aria-expanded="false"
+                            aria-label="More Features pages"
+                            onclick="toggleSubNav(this.id)"
+                        >
+                            <svg
+                                width="10"
+                                height="6"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke="#686868"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                    d="m1 1 4 4 4-4"
+                                />
+                            </svg>
+                        </button>
+                        <ul id="id_features_menu" style="display: none">
                             <li>
                                 <img
                                     src="./assets/images/icon-todo.svg"
@@ -80,7 +101,28 @@
                     </li>
                     <li>
                         <a href="">Company</a>
-                        <ul>
+                        <button
+                            id="btnCompany"
+                            class="expanded-button"
+                            aria-controls="id_company_menu"
+                            aria-expanded="false"
+                            aria-label="More Company pages"
+                            onclick="toggleSubNav(this.id)"
+                        >
+                            <svg
+                                width="10"
+                                height="6"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke="#686868"
+                                    stroke-width="1.5"
+                                    fill="none"
+                                    d="m1 1 4 4 4-4"
+                                />
+                            </svg>
+                        </button>
+                        <ul id="id_company_menu" style="display: none">
                             <li><a href="#">History</a></li>
                             <li><a href="#">Our Team</a></li>
                             <li><a href="#">Blog</a></li>
@@ -147,10 +189,6 @@
                 >. Coded by <a href="#">Your Name Here</a>.
             </div>
         </footer>
-
         <script src="./js/menu.js"></script>
-        <script>
-            console.log("this works ?");
-        </script>
     </body>
 </html>
