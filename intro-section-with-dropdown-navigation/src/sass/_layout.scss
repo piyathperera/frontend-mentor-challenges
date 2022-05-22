@@ -16,11 +16,10 @@ body {
 
 // Header + Navigation
 * {
-    outline: 1px solid hotpink;
+    // outline: 1px solid hotpink;
 }
 
 header {
-    background-color: lightblue;
     display: flex;
     align-items: center;
 
@@ -31,7 +30,6 @@ header {
 
 nav {
     flex-grow: 1;
-    
 
     #toggle {
         display: none;
@@ -42,7 +40,6 @@ nav {
     }
 
     #menu {
-        background-color: bisque;
         display: flex;
         align-items: center;
         flex: 1;
@@ -54,25 +51,98 @@ nav {
         }
 
         & li:nth-child(4) {
-            // background-color: lightcoral;
             margin-right: auto;
         }
 
-        li {
-          a + button svg {
-            background-color: lightgreen;
-            transition: transform .25s ease-in;
-            transform-origin: center 45%;
-          }
+        & li.btn__link {
+            display: block;
+        }
 
-          button[aria-expanded="true"] svg {
-            transform: rotate(180deg);
-          }
+        & li.btn__link--primary {
+            border: 2px solid $clr-accent;
+            border-radius: 10px;
+            padding: 0.25rem 1rem;
+
+            &:hover {
+                border-color: $clr-primary;
+                a {
+                    color: $clr-primary;
+                }
+            }
+        }
+
+        & li:last-child {
+            margin-right: 1rem;
+        }
+
+        li {
+            a {
+                color: $clr-accent;
+                text-decoration: none;
+                font-size: $font-link-size;
+
+                &:hover {
+                    color: $clr-primary;
+                }
+            }
+
+            button {
+                border: 0;
+                background-color: transparent;
+
+                &:hover {
+                    color: $clr-primary;
+
+                    svg {
+                        path {
+                            stroke: $clr-primary;
+                        }
+                    }
+                }
+            }
+
+            a + button svg {
+                // background-color: lightgreen;
+                transition: transform 0.15s ease-in;
+                transform-origin: center 45%;
+
+                &:hover {
+                    fill: $clr-primary;
+                }
+            }
+
+            button[aria-expanded="true"] svg {
+                transform: rotate(180deg);
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: var(--gap, 1rem);
+                display: none;
+                background-color: $clr-secondary;
+                padding: 1rem 0;
+                margin-top: 1rem;
+                box-shadow: 0 0 5px 5px red;
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 0 1.5rem;
+                }
+
+                &[data-visible="true"] {
+                    display: flex;
+                    position: absolute;
+                }
+            }
         }
     }
 }
 
-@media screen and (max-width: 52em) {
+@media screen and (max-width: 50.625em) {
     nav {
         #toggle {
             display: block;
@@ -82,7 +152,7 @@ nav {
             text-align: center;
             border: 0;
             aspect-ratio: 1;
-            top: .4rem;
+            top: 0.4rem;
             right: 2rem;
         }
 
@@ -101,12 +171,37 @@ nav {
             transition: transform 300ms ease-out;
 
             ul.is-active {
-              display: block;
+                display: block;
             }
         }
 
         #menu[data-visible="true"] {
-          transform: translateX(0%);
+            transform: translateX(0%);
+
+            li {
+                position: relative;
+                ul {
+                    &[data-visible="true"] {
+                        display: flex;
+                        position: static;
+                        box-shadow: none;
+                        margin: 0;
+                    }
+                }
+            }
+
+            & li.btn__link {
+                display: block;
+                width: 100%;
+                text-align: center;
+                // background-color: lightcoral;
+
+                &--primary {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         }
     }
 }
