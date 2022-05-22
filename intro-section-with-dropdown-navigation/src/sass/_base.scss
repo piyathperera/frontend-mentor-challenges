@@ -3,26 +3,26 @@ $clr-primary: hsl(0, 0%, 8%);
 $clr-accent: hsl(0, 0%, 41%);
 $clr-secondary: hsl(0, 0%, 98%);
 
-$font-primary-size: 1.125em;
-$font-heading-size: 3em;
-$font-link-size: 1em;
-
 $font-primary: normal 1.125em/1.5 "Epilogue", sans-serif;
 $font-heading: bold 3em/1.1 "Epilogue", sans-serif;
-$font-heading: normal 1em/1.5 "Epilogue", sans-serif;
+$font-link: normal 1em/1.5 "Epilogue", sans-serif;
+
+$font-primary-size: 1.125em;
+$font-heading-size: 3em;
+$font-link-size: .9em;
 
 :root {
     --clr-primary: # {hsl(0, 0%, 8%)};
     --clr-accent: # {hsl(0, 0%, 41%)};
     --clr-secondary: # {hsl(0, 0%, 98%)};
 
-    --font-primary-size: # {1.125em}; 
-    --font-heading-size: # {3em};
-    --font-link-size: # {1em};
-
     --font-primary: # {normal 1.125em/1.5 "Epilogue", sans-serif};
     --font-heading: # {bold 3em/1.1 "Epilogue", sans-serif};
-    --font-heading: # {normal 1em/1.5 "Epilogue", sans-serif};
+    --font-link: # {normal .9em/1.5 "Epilogue", sans-serif};
+
+    --font-primary-size: # {1.125em}; 
+    --font-heading-size: # {3em};
+    --font-link-size: # {.9em};
 }
 
 .sr-only {
