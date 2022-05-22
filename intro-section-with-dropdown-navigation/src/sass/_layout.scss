@@ -204,32 +204,112 @@ nav {
             }
         }
     }
+
+    main {
+        .hero {
+            
+
+            .hero__content {
+                padding: 0;
+                h3 {
+                    font-size: 5.5em;
+                }
+            }
+        }
+    }
 }
 
 // Main
+main {
+    margin: 0 auto;
 
-.hero {
-    display: flex;
-    flex-direction: column-reverse;
-}
+    .hero {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+        // padding: 0 2rem;
+        // max-inline-size: max-content;
+        // margin-inline: auto;
 
-.hero__content {
-    background-color: lightgreen;
-}
+        // &div.hero__content > * + * {
+        //     margin: 1rem auto;
+        // }
 
-.hero__content > * + * {
-    margin: 1rem auto;
-}
+        // flex-direction: column-reverse;
 
-.hero__image {
-    background-color: lightpink;
-}
-.hero__image img {
-    width: auto;
-    max-inline-size: 100%;
-    block-size: auto;
-    // aspect-ratio: 16/9;
-    object-fit: cover;
+        div.hero__content {
+            max-width: 100%;
+            padding: 1rem;
+            h3 {
+                font: $font-heading;
+            }
+
+            p {
+                max-width: 50ch;
+                text-align: start;
+            }
+
+            :is(h3, p, a) {
+                margin: 3rem 0;
+            }
+
+            .button {
+                // margin: 4rem auto;
+                padding: 0.75rem 1.5rem;
+                border-radius: 14px;
+                border: 2px solid $clr-primary;
+                text-decoration: none;
+
+                &--primary {
+                    background-color: $clr-primary;
+                    color: $clr-secondary;
+                }
+
+                &--secondary {
+                    border: 2px solid $clr-accent;
+                }
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+                margin-top: 8rem;
+                padding: 0;
+                gap: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 50.625em) {
+            flex-wrap: wrap-reverse;
+            gap: 2rem;
+            margin: 1rem auto;
+            // align-items: center;
+            justify-content: center;
+
+
+            div.hero__content {
+                padding: 0;
+                gap: 1rem;
+
+                h3 {
+                    font-size: 2em;
+                }
+
+                p {
+                    text-align: center;
+                    padding: 0 0.5rem;
+                }
+
+                :is(h3, p, a) {
+                    margin: 2rem 0;
+                }
+
+                ul {
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
 }
 
 // Footer
