@@ -64,33 +64,10 @@ function toggleSubNav(eID) {
                 // Close chosen menu; no need to loop through rest of nodes
                 subMenu.dataset.visible = "false";
             }
-            // Expand or collapse
-            // This mess up with css specificity and overide style rules.
-            // if (subMenu.style.display === "none") {
-            //     // Hide all submenus
-            //     for (var i = 0; i < allSubMenus.length; i++) {
-            //         allSubMenus[i].style.display = "none";
-            //     }
-            //     // Show chosen submenu
-            //     subMenu.style.display = "block";
-            // } else {
-            //     // Close chosen menu; no need to loop through rest of nodes
-            //     subMenu.style.display = "none";
-            // }
 
         }
         if (eID !== "") {
         } else {
-            // // Hide all submenus
-            // for (var i = 0; i < allSubMenus.length; i++) {
-            //     allSubMenus[i].style.display = "none";
-            // }
-            // // Loop through all buttons and mark as closed
-            // for (var i = 0; i < allButtons.length; i++) {
-            //     allButtons[i].setAttribute("aria-expanded", "false");
-            //     // allButtons[i].setAttribute("aria-label", "Show");
-            //     // allButtons[i].innerHTML = arrowShow;
-            // }
             // Hide all submenus
             for (var i = 0; i < allSubMenus.length; i++) {
                 allSubMenus[i].dataset.visible = "false";
