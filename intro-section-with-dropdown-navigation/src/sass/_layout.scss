@@ -15,13 +15,14 @@ body {
 }
 
 // Header + Navigation
-* {
-    // outline: 1px solid hotpink;
-}
+// * {
+//      outline: 1px solid hotpink;
+// }
 
 header {
     display: flex;
     align-items: center;
+    padding: 0 1rem;
 
     h1 + img {
         padding: 1rem;
@@ -44,6 +45,7 @@ nav {
         align-items: center;
         flex: 1;
         gap: var(--gap, 2rem);
+        padding-left: 3rem;
 
         & + ul {
             padding: 0;
@@ -102,7 +104,6 @@ nav {
             }
 
             a + button svg {
-                // background-color: lightgreen;
                 transition: transform 0.15s ease-in;
                 transform-origin: center 45%;
 
@@ -123,7 +124,9 @@ nav {
                 background-color: $clr-secondary;
                 padding: 1rem 0;
                 margin-top: 1rem;
-                box-shadow: 0 0 5px 5px red;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                    rgba(17, 17, 26, 0.1) 0px 8px 24px,
+                    rgba(17, 17, 26, 0.1) 0px 16px 56px;
 
                 li {
                     display: flex;
@@ -205,29 +208,28 @@ nav {
         }
     }
 
-    main {
-        .hero {
-            
-
-            .hero__content {
-                padding: 0;
-                h3 {
-                    font-size: 5.5em;
-                }
-            }
-        }
-    }
+    // main {
+    //     .hero {
+    //         .hero__content {
+    //             padding: 0;
+    //             h3 {
+    //                 font-size: 5.5em;
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 // Main
 main {
-    margin: 0 auto;
-
     .hero {
+        max-width: 64em;
         display: flex;
         gap: 4rem;
         align-items: center;
-        // padding: 0 2rem;
+        margin: 2rem auto;
+
+        padding: 0 2rem;
         // max-inline-size: max-content;
         // margin-inline: auto;
 
@@ -237,9 +239,14 @@ main {
 
         // flex-direction: column-reverse;
 
+        // & > * {
+        //      outline: 1px solid hotpink;
+        // }
+
         div.hero__content {
             max-width: 100%;
-            padding: 1rem;
+            flex: 1.5;
+            align-items: flex-end;
             h3 {
                 font: $font-heading;
             }
@@ -254,7 +261,6 @@ main {
             }
 
             .button {
-                // margin: 4rem auto;
                 padding: 0.75rem 1.5rem;
                 border-radius: 14px;
                 border: 2px solid $clr-primary;
@@ -263,6 +269,11 @@ main {
                 &--primary {
                     background-color: $clr-primary;
                     color: $clr-secondary;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $clr-primary;
+                    }
                 }
 
                 &--secondary {
@@ -273,23 +284,29 @@ main {
             ul {
                 display: flex;
                 list-style: none;
-                margin-top: 8rem;
+                margin-top: 4rem;
                 padding: 0;
                 gap: 2rem;
             }
         }
 
+        div.hero__image {
+            flex: 1;
+        }
+
         @media screen and (max-width: 50.625em) {
+            display: flex;
             flex-wrap: wrap-reverse;
             gap: 2rem;
             margin: 1rem auto;
-            // align-items: center;
-            justify-content: center;
-
+            padding: 0;
 
             div.hero__content {
                 padding: 0;
                 gap: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                flex: initial;
 
                 h3 {
                     font-size: 2em;
@@ -297,7 +314,6 @@ main {
 
                 p {
                     text-align: center;
-                    padding: 0 0.5rem;
                 }
 
                 :is(h3, p, a) {
@@ -308,8 +324,20 @@ main {
                     margin-top: 4rem;
                 }
             }
+
+            div.hero__image {
+                flex: initial;
+            }
         }
     }
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $clr-accent;
+}
+.attribution a {
+    color: $clr-primary;
+}
 // Footer
