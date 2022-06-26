@@ -1,0 +1,20 @@
+{
+    "links": [
+        {
+            "text": "Home",
+            "url": "/"
+        },
+        {
+            "text": "Shop",
+            "url": "/shop/"
+        },
+        {
+            "text": "About",
+            "url": "/about/"
+        },
+        {
+            "text": "Contact",
+            "url": "/contact/"
+        }
+    ]
+}
