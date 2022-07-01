@@ -1,5 +1,6 @@
 ---
 layout: layouts/home
-title: "Home"
 permalink: /
+title: "Home"
+description: "This is Home page."
 ---

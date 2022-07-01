@@ -1,5 +1,14 @@
 <nav>
     <ul>
-        <li><a href="">link</a></li>
+        {% for link in nav.links %}
+        <li><a href="{{ link.url }}
+        "
+        {% if link.url === page.url %}
+        aria-current="page"
+        {% endif %}
+        >
+            {{ link.name }}
+        </a></li>
+        {% endfor %}
     </ul>
 </nav>

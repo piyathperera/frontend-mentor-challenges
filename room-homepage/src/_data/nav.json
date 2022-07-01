@@ -1,19 +1,19 @@
 {
     "links": [
         {
-            "text": "Home",
+            "name": "Home",
             "url": "/"
         },
         {
-            "text": "Shop",
+            "name": "Shop",
             "url": "/shop/"
         },
         {
-            "text": "About",
+            "name": "About",
             "url": "/about/"
         },
         {
-            "text": "Contact",
+            "name": "Contact",
             "url": "/contact/"
         }
     ]
