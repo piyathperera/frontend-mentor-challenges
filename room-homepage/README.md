@@ -1,93 +1,196 @@
-# Frontend Mentor - Room homepage
+NEEDS AN UPDATE...
 
-![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)
+Add these links under the required content.
+Navigation
+https://css-tricks.com/in-praise-of-the-unambiguous-click-menu/
+https://www.a11ymatters.com/pattern/mobile-nav/
 
-## Welcome! 👋
+https://www.smashingmagazine.com/2017/11/building-accessible-menu-systems/
 
-Thanks for checking out this front-end coding challenge.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+styling with a11y in mind
+https://benmyers.dev/blog/semantic-selectors/
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+controls the menu with aria
+https://xane514.medium.com/aria-controls-for-creating-a-mobile-navbar-6001012153a0
 
-## The challenge
 
-Your challenge is to build out this e-commerce homepage and get it looking as close to the design as possible.
+# Frontend Mentor - QR code component solution
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+This is a solution to the [Intro section with dropdown navigation](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+-   [Overview](#overview)
+    -   [The Challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The Challenge
 
 Your users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Navigate the slider using either their mouse/trackpad or keyboard
+-   View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
+-   View the optimal layout for the content depending on their device's screen size
+-   See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![Desktop layout](./src/assets/images/screenshot_desktop.png)
+Dekstop
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+![Mobile layout](./src/assets/images/screenshot_mobile.png) 
+Mobile
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Links
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+-   [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-with-css-grid-and-flexbox-HyMoJC9Hc)
+-   [Live Site](https://frontend-mentor-challeneges.netlify.app/intro-section-with-dropdown-navigation/)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+## My process
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Built with
 
-## Building your project
+-   Semantic HTML5 markup
+-   SASS pre-processor with build setup
+-   Flexbox
+-   CSS Grid
+-   Javascript
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### What I learned
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+I learned about responsive images with help of [MDN article](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) which uses <source> elements wrapped with <picture> element to have seperate images for different screen sizes and serving up two images when the screen size is changed.
 
-## Deploying your project
+```html
+<picture>
+    <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+    <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+    <img
+        src="elva-800w.jpg"
+        alt="Chris standing up holding his daughter Elva"
+    />
+</picture>
+```
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+I learned about creating dropdown menu, it's easy right? just list of links showing vertically when you hover/click on down arrow icon. But read a great [article](https://adrianroselli.com/2019/06/link-disclosure-widget-navigation.html) on why its not that easy. In terms of a11y, need to consider visually events upon clicking as well as any user using a keyboard to get ability to close, open and navigate the menu.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```html
+<ul id="menu" data-visible="false">
+    <li>
+        <a href="">Features</a>
+        <button
+            id="btnFeature"
+            class="expanded-button"
+            aria-controls="id_features_menu"
+            aria-expanded="false"
+            aria-label="More Features pages"
+            onclick="toggleSubNav(this.id)"
+        >
+            <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    stroke="#686868"
+                    stroke-width="1.5"
+                    fill="none"
+                    d="m1 1 4 4 4-4"
+                />
+            </svg>
+        </button>
+        <ul id="id_features_menu" data-visible="false">
+            <li>
+                <img src="./assets/images/icon-todo.svg" alt="" /><a href="#"
+                    >Todo List</a
+                >
+            </li>
+            <li>
+                <img src="./assets/images/icon-calendar.svg" alt="" /><a
+                    href="#"
+                    >Calendar</a
+                >
+            </li>
+        </ul>
+    </li>
+</ul>
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+```js
+document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = evt.key == "Escape" || evt.key == "Esc";
+    } else {
+        isEscape = evt.keyCode == 27;
+    }
+    if (isEscape) {
+        //alert("Escape");
+        toggleSubNav("");
+    }
+};
+```
 
-## Create a custom `README.md`
+I learned sass, a pre processor helps css to become more powerful and have more features like nesting, custom properties and conditional statements. These superp powers helps me in this project to reduce the number of css classes i had to write and encapsulate styles in their own components, also made them easier to find when making changes.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```css
+        #menu[data-visible="true"] {
+            transform: translateX(0%);
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+            li {
+                position: relative;
+                ul {
+                    &[data-visible="true"] {
+                        display: flex;
+                        position: static;
+                        box-shadow: none;
+                        margin: 0;
+                    }
+                }
+            }
 
-## Submitting your solution
+            & li.btn__link {
+                display: block;
+                width: 100%;
+                text-align: center;
+                // background-color: lightcoral;
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+                &--primary {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+### Continued development
 
-## Sharing your solution
+I would like add more structure in html and use a css methodology like BEM, CUBE CSS to add more readbility and simplification to the code.
 
-There are multiple places you can share your solution:
+Learning to add css animations to elements of the website.
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+### Useful resources
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+-   [Responsive images - MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/) - These helped me for to understand responsive design for images. It clearly outlined step by step approach to make images responsive.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+-   [SASS setup - Stephanie Eckles](https://thinkdobecreate.com/articles/minimum-static-site-sass-setup/) - This helped me to setup sass preprocessor with all packages and build setups needed.
 
-## Got feedback for us?
+-   [Link + Disclourse Widget Navigation - AdriaN Roselli](https://adrianroselli.com/2019/06/link-disclosure-widget-navigation.html) - This helps to create a dropdown menu the right way and helps to use with a11y.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+## Author
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+-   Website - [Piyath Perera](https://piyathperera.netlify.app)
+-   Frontend Mentor - [@piyathperera](https://www.frontendmentor.io/profile/piyathperera)
+-   Twitter - [@PiyathPerera](https://www.twitter.com/PiyathPerera)
 
-**Have fun building!** 🚀
+## Acknowledgments
+
+I would like to acknowledge the internet and everyone contributing in it by creating videos, tutorials, articles and answering questions.Those resources are helping me to be a better developer today.

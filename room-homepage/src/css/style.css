@@ -9,6 +9,21 @@
     --white: hsl(0, 0%, 100%);
 }
 
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+.sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 * {
     outline: 1px solid hotpink;
 }
@@ -18,17 +33,12 @@ HEADER
 */
 
 header {
-    background-color: lightseagreen;
+    width: 100%;
+    /* background-color: lightseagreen; */
     display: flex;
     align-items: center;
-    /* padding: 2rem 1.5rem; */
+    padding: 2rem 1.5rem;
     position: absolute;
-}
-
-header button {
-    display: none;
-    /* height: 30px;
-    width: 30px; */
 }
 
 nav ul {
@@ -38,8 +48,8 @@ nav ul {
     gap: 1.5em;
 }
 
-nav a{
-    flex: 0 0 100%;
+nav a {
+    /* flex: 0 0 100%; */
 }
 
 a {
@@ -60,11 +70,13 @@ a:focus {
     outline-color: var(--clr-link);
 }
 
+header a,
 nav a {
     --clr-link: hsl(0, 0%, 100%);
     text-decoration: none;
 }
 
+header a:focus,
 nav a:focus {
     --clr-link: var(--white);
     --clr-link-bg: var(--very-dark-gray);
@@ -76,87 +88,77 @@ a:focus {
     text-decoration: underline;
 }
 
+button:focus {
+    /* margin: .2rem; */
+    outline: 2px solid black;
+}
+
+#navToggle {
+    display: none;
+}
+
 @media screen and (max-width: 30em) {
-    header {
-        /* margin: 2rem auto; */
-        /* background-color: var(--white); */
-        /* z-index: 4; */
-        width: 100%;
-        /* position: absolute; */
-        /* justify-content: space-around; */
-    }
-    
     #navToggle {
-        width: calc(1.2em + 1vw);
-        height: calc(1.2em + 1vw);
-        padding: .5em;
-        display: flex;
-        align-content: center;
-        justify-content: center;
+        display: block;
+        width: 1.4em;
+        height: 1.2em;
+        border: 0;
         background-image: url("../../images/icon-hamburger.svg");
-        background-color: transparent;
         background-size: contain;
         background-repeat: no-repeat;
-        border: 0;
-        color: transparent;
-    }
-
-    #navToggle[aria-expanded=true] {
-        background-image: url("../../images/icon-close.svg");
-        margin: 1rem;
-        background-color: lightblue;
-        z-index: 999;
-        padding-block: 1.8rem;
         background-position: center;
+        background-color: transparent;
+        z-index: 3;
     }
 
-     #navToggle[aria-expanded=true] + img {
+    header {
+        justify-content: space-between;
+    }
+
+    /* Removes logo which causes a break in tabbing order */
+    #navToggle[aria-expanded="true"] ~ a[href="#logo"] {
         display: none;
     }
 
-    :not(header) > #navToggle[aria-expanded=true] {
-        background-color: white;
-    }
-
-    header img {
-        align-items: center;
-        margin: auto;
-        /* display: none; */
-    }
-   
-    nav ul {
-        background-color: lightcoral;
-        padding: 0;
-        margin: 0;
-        display: none;
-    }
-
-    nav a {
-        --clr-link: black;
-    }
-
-/* 
-    nav a {
-        --clr-link: var(--black);
-    } */
-    
-    /* nav a:focus {
-        --clr-link: var(--black);
-        --clr-link-bg: var(--dark-gray);
-    } */
-
-    #navToggle[aria-expanded=true] ~ nav ul {
-        /* outline: 2px solid blue; */
-        position: absolute;
+    #navToggle[aria-expanded="true"] ~ nav {
+        position: fixed;
         top: 0;
+        left: 0;
         right: 0;
-        display: flex;
+        height: 100%;
+        background-color: hsla(0, 0%, 0%, 0.5);
+        overflow: hidden;
+    }
+
+    nav ul {
+        display: none;
         width: 100%;
-        /* margin-left: 2.5rem; */
-        color: black;
-        padding-block: 2rem;
-        padding-inline-start: 4.5rem;
-        padding-inline-end: 1.5rem;
+        /* top: 0;
+        left: 0; */
+        margin: 0;
+        z-index: 2;
+        padding: 2rem 2rem;
+        background-color: var(--white);
+    }
+
+    /* #navToggle[aria-expanded="false"] ~ ul {
+        display: none;
+    } */
+    #navToggle[aria-expanded="true"] {
+        background-image: url("../../images/icon-close.svg");
+    }
+
+    #navToggle[aria-expanded="true"] ~ nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline-end: 1rem;
+    }
+
+    #navToggle[aria-expanded="true"] ~ header a,
+    nav a {
+        --clr-link: hsl(0, 0%, 0%);
+        text-decoration: none;
     }
 }
 
