@@ -1,0 +1,195 @@
+:root {
+    /* 
+    experimenting...
+    Colors 
+    */
+    --dark-gray: hsl(0, 0%, 63%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    outline: 1px solid hotpink;
+}
+
+/* 
+HEADER
+*/
+
+header {
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    /* padding: 2rem 1.5rem; */
+    position: absolute;
+}
+
+header button {
+    display: none;
+    /* height: 30px;
+    width: 30px; */
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 1.5em;
+}
+
+nav a{
+    flex: 0 0 100%;
+}
+
+a {
+    --clr-link: hsl(0, 0%, 0%);
+    --clr-link-bg: hsla(0, 0%, 100%, 0);
+
+    --_color: var(--clr-link, hsl(0, 0%, 0%));
+    --_clr-link-bg: var(--dark-gray), hsl(0, 0%, 63%);
+    padding: 0.2rem;
+    background: var(--clr-link-bg);
+    color: var(--_color);
+}
+
+a:focus {
+    --clr-link: var(--dark-gray);
+    --clr-link-bg: var(--white);
+    border-radius: 0;
+    outline-color: var(--clr-link);
+}
+
+nav a {
+    --clr-link: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+nav a:focus {
+    --clr-link: var(--white);
+    --clr-link-bg: var(--very-dark-gray);
+}
+
+nav a:hover,
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 30em) {
+    header {
+        /* margin: 2rem auto; */
+        /* background-color: var(--white); */
+        /* z-index: 4; */
+        width: 100%;
+        /* position: absolute; */
+        /* justify-content: space-around; */
+    }
+    
+    #navToggle {
+        width: calc(1.2em + 1vw);
+        height: calc(1.2em + 1vw);
+        padding: .5em;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-image: url("../../images/icon-hamburger.svg");
+        background-color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: 0;
+        color: transparent;
+    }
+
+    #navToggle[aria-expanded=true] {
+        background-image: url("../../images/icon-close.svg");
+        margin: 1rem;
+        background-color: lightblue;
+        z-index: 999;
+        padding-block: 1.8rem;
+        background-position: center;
+    }
+
+     #navToggle[aria-expanded=true] + img {
+        display: none;
+    }
+
+    :not(header) > #navToggle[aria-expanded=true] {
+        background-color: white;
+    }
+
+    header img {
+        align-items: center;
+        margin: auto;
+        /* display: none; */
+    }
+   
+    nav ul {
+        background-color: lightcoral;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+
+    nav a {
+        --clr-link: black;
+    }
+
+/* 
+    nav a {
+        --clr-link: var(--black);
+    } */
+    
+    /* nav a:focus {
+        --clr-link: var(--black);
+        --clr-link-bg: var(--dark-gray);
+    } */
+
+    #navToggle[aria-expanded=true] ~ nav ul {
+        /* outline: 2px solid blue; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        width: 100%;
+        /* margin-left: 2.5rem; */
+        color: black;
+        padding-block: 2rem;
+        padding-inline-start: 4.5rem;
+        padding-inline-end: 1.5rem;
+    }
+}
+
+/*
+MAIN
+*/
+
+/* 
+.carousel {
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel::before {
+    background-image: url("../../images/icon-angle-right.svg");
+  }
+
+.slide {
+    display: flex;
+    flex: 0 0 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .slide h2::before {
+    content: "something";
+    background-image: url("../../images/icon-angle-right.svg");
+  } */
+
+/* .slide img::after {
+    content: "something";
+    display: inline-block;
+}  */
