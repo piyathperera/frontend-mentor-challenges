@@ -136,7 +136,7 @@ button:focus {
         /* top: 0;
         left: 0; */
         margin: 0;
-        z-index: 2;
+        z-index: 10;
         padding: 2rem 2rem;
         background-color: var(--white);
     }
@@ -166,32 +166,107 @@ button:focus {
 MAIN
 */
 
-/* 
+
 .carousel {
-    background-color: lightgoldenrodyellow;
+    width: 100vw;
+    background-color: lightgray;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    z-index: 2;
 }
+
+.slide {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0; */
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr)); */
+    /* width: 100%; */
+    overflow: hidden;
+}
+
+.slide img {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+    /* aspect-ratio: 16/9; */
+    object-fit: contain;
+}
+
+.slide-content {
+    --padding-inline: 4rem;
+    padding-inline: var(--padding-inline);
+    padding-block: 3rem;
+    max-width: 60ch;
+    display: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.slide-content h2 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+.carousel__nav
+
+.slide-content p {
+    padding-block: 1.5rem;
+}
+
+.slide-content a {
+
+}
+
+@media screen and (max-width: 60em) {
+    .slide {
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+
+    .slide-content {
+        --padding-inline: 2rem;
+    }
+
+    .slide-content h2 {
+        font-size: 2.2em;
+        line-height: 1;
+    }
+
+}
+
+
+
+/* .slide > img {
+    flex: 2;
+}
+.slide > div.slide-content {
+    flex: 1;
+} */
+
+
+
+/* .slide h2::before {
+    content: "something";
+    background-image: url("../../images/icon-angle-right.svg");
+  } 
+
 
 .carousel::before {
     background-image: url("../../images/icon-angle-right.svg");
   }
 
-.slide {
-    display: flex;
-    flex: 0 0 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* .slide h2::before {
-    content: "something";
-    background-image: url("../../images/icon-angle-right.svg");
-  } */
-
-/* .slide img::after {
+.slide img::after {
     content: "something";
     display: inline-block;
-}  */
+} 
+*/
