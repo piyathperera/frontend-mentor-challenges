@@ -21,7 +21,13 @@
                     <a id="logo" href="#logo">
                         <img src="./images/logo.svg" alt="" />
                     </a>
-
+                    <button
+                        id="navToggle"
+                        aria-expanded="false"
+                        aria-controls="navigation-menu"
+                    >
+                        <span class="sr-only">Open menu</span>
+                    </button>
                     <nav>
                         <ul role="list" class="nav-list">
                             <li><a href="#">How we work</a></li>
@@ -35,8 +41,8 @@
         </header>
 
         <main>
-            <article class="intro">
-                <div class="region wrapper">
+            <article class="intro | region">
+                <div class="wrapper">
                     <div class="flex-test">
                         <div class="flow">
                             <hr class="heading-hr" />
@@ -50,7 +56,17 @@
                             <a class="button" href="#">View Plans</a>
                         </div>
 
-                        <img src="./images/image-intro-desktop.jpg" alt="" />
+                        <picture>
+                            <source
+                                srcset="./images/image-intro-mobile.jpg"
+                                media="(max-width: 23.5em)"
+                            />
+                            <img
+                                src="./images/image-intro-desktop.jpg"
+                                alt=""
+                            />
+                        </picture>
+                        <!-- <img src="./images/image-intro-desktop.jpg" alt="" /> -->
                     </div>
                 </div>
             </article>
