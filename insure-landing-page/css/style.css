@@ -250,6 +250,15 @@ nav a {
     letter-spacing: 0.1ch;
 }
 
+nav a:hover, nav a:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+.nav-list a:hover, nav a:focus {
+   text-decoration: none;
+}
+
 .nav-list a[class="button"] {
     --color-btn: var(--color-primary);
 }
@@ -257,6 +266,7 @@ nav a {
 .nav-list a[class="button"]:hover {
     --color-btn: var(--color-on-secondary);
     background: var(--color-dark);
+    color: var(--color-btn);
 }
 
 .button {
