@@ -217,10 +217,15 @@ a:hover {
 }
 
 /* BLOCK */
+header {
+    z-index: 12;
+}
+
 .site-head {
+    position: relative;
     padding-top: var(--space-s);
     padding-bottom: var(--space-s);
-    z-index: 10;
+    z-index: 12;
 }
 
 .site-head ul {
@@ -296,6 +301,7 @@ nav a:hover, nav a:focus {
 @media screen and (max-width: 50em) {
     .site-head {
         position: relative;
+        z-index: 12;
     }
 
     #navToggle {
@@ -308,7 +314,7 @@ nav a:hover, nav a:focus {
         background-repeat: no-repeat;
         background-position: center;
         background-color: transparent;
-        z-index: 11;
+        z-index: 14;
     }
 
     .site-head nav {
@@ -321,17 +327,6 @@ nav a:hover, nav a:focus {
     #navToggle[aria-expanded="true"] {
         background-image: url("../../images/icon-close.svg");
     }
-
-    /* [aria-expanded="true"] ~ .site-head .nav-list {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: var(--size-50, 0);
-        background-image: linear-gradient(to right, transparent, rgba(255,255,255, 0.7));
-        width: 100%;
-        text-align: right;
-        box-shadow: 0px 0px 20px rgba(52, 49,75,0.3);
-    } */
 
     .nav-list {
         display: flex;
@@ -352,16 +347,6 @@ nav a:hover, nav a:focus {
     .nav-list a[class="button"]  {
         --color-btn: var(--color-on-primary);
     }
-   
-    /* [aria-expanded="true"] ~ html, [aria-expanded="true"] ~ body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-    } */
 
     #navToggle[aria-expanded="true"] ~ nav {
         display: flex;
@@ -394,74 +379,50 @@ nav a:hover, nav a:focus {
         justify-content: center;
         padding-inline-end: 1rem;
     }
-
-    /*
-    
-    .site-head, .site-head .splitter {
-        justify-content: space-between;
-    }
-
-    .site-head nav {
-        display: none;
-    }
-
-    #navToggle[aria-expanded="false"] ~ .nav-list {
-        display: none;
-        width: 100%;
-        top: 0;
-        left: 0;
-        margin: 0;
-        z-index: 10;
-        padding: 2rem 2rem;
-        background-color: var(--white);
-    } 
-    
-    */
-
-    /* Removes logo which causes a break in tabbing order */
-    /* #navToggle[aria-expanded="true"] ~ a[href="#logo"] {
-        display: none;
-    }
-
-    #navToggle[aria-expanded="true"] ~ nav {
-        display: flex; 
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 11;
-        height: 100vh;
-        background-color: lightpink;
-        overflow: hidden;
-    }
-
-    
-
-    #navToggle[aria-expanded="false"] ~ ul {
-        display: none;
-    }
-    #navToggle[aria-expanded="true"] {
-        background-image: url("../../images/icon-close.svg");
-    }
-
-    #navToggle[aria-expanded="true"] ~ .nav-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-inline-end: 1rem;
-    }
-
-    #navToggle[aria-expanded="true"] ~ header a,
-    nav a {
-        --clr-link: hsl(0, 0%, 0%);
-        text-decoration: none;
-    } */
 }
 
 .intro {
+    position: relative;
     background: var(--color-primary);
     color: var(--color-on-primary);
+}
+
+@media screen and (min-width: 60em) {
+    .intro::before {
+        content: url("../images/bg-pattern-intro-right-desktop.svg");
+        position: absolute;
+        right: 0;
+        top: -8rem;
+        z-index: 2;
+    }
+    
+    .intro::after {
+        content: url("../images/bg-pattern-intro-left-desktop.svg");
+        position: absolute;
+        left: 0;
+        bottom: -20rem;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    .intro .flex-test {
+        gap: 0;
+    }
+
+    .intro .flow::before {
+        content: url("../images/bg-pattern-intro-left-mobile.svg");
+        position: absolute;
+        left: 0;
+        /* top: 1rem; */
+        z-index: 100;
+    }
+    
+    .intro .flow::after {
+        content: url("../images/bg-pattern-intro-right-mobile.svg");
+        position: absolute;
+        right: 0;
+        bottom: -20rem;
+    }
 }
 
 .flex-test {
@@ -594,16 +555,41 @@ nav a:hover, nav a:focus {
     padding-inline: var(--space-xl, 1em);
 }
 
+@media screen and (max-width: 60em) {
+    .cta {
+        background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    }
+}
+
 .cta h2 {
     max-width: 18ch;
 }
 
-.svg-bg {
+/* .svg-bg {
     background: url("../images/bg-pattern-how-we-work-desktop.svg");
-}
+} */
+
 
 .site-footer {
     background: hsl(0, 0%, 98%);
+
+}
+
+.site-footer::before {
+    content: url("../images/bg-pattern-footer-desktop.svg");
+    position: absolute;
+    left: 0;
+    /* top: 0; */
+    z-index: 100;
+}
+
+@media screen and (max-width: 40em) {
+    .site-footer::before {
+        content: url("../images/bg-pattern-footer-mobile.svg");
+        /* position: absolute;
+        left: 0;
+        z-index: 100; */
+    }
 }
 
 .social-links {
@@ -674,6 +660,12 @@ footer nav a {
     :is(.cta-section) .splitter {
         justify-content: center;
     }
+}
+
+.attribution {
+    padding-block: 1rem;
+    padding-inline: .5rem;
+    text-align: center;
 }
 
 /* EXCEPTION */
