@@ -1,11 +1,12 @@
 :root {
     /* GLOBAL CSS */
 
-    /* 
-    *
-    COLORS 
-    *
-    */
+    /* COLORS */
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-dark-light-gray: hsl(0, 0%, 98%);
 
     --color-light: #fff;
     --color-dark: hsl(270, 9%, 17%);
@@ -255,13 +256,15 @@ nav a {
     letter-spacing: 0.1ch;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
     color: #000;
     text-decoration: underline;
 }
 
-.nav-list a:hover, nav a:focus {
-   text-decoration: none;
+.nav-list a:hover,
+nav a:focus {
+    text-decoration: none;
 }
 
 .nav-list a[class="button"] {
@@ -344,7 +347,7 @@ nav a:hover, nav a:focus {
         color: var(--color-on-primary);
     }
 
-    .nav-list a[class="button"]  {
+    .nav-list a[class="button"] {
         --color-btn: var(--color-on-primary);
     }
 
@@ -369,7 +372,6 @@ nav a:hover, nav a:focus {
     #navToggle[aria-expanded="true"] ~ body {
         overflow-y: hidden;
     }
-    
 
     #navToggle[aria-expanded="true"] ~ .nav-list {
         background-color: lightskyblue;
@@ -395,7 +397,7 @@ nav a:hover, nav a:focus {
         top: -8rem;
         z-index: 2;
     }
-    
+
     .intro::after {
         content: url("../images/bg-pattern-intro-left-desktop.svg");
         position: absolute;
@@ -416,7 +418,7 @@ nav a:hover, nav a:focus {
         /* top: 1rem; */
         z-index: 100;
     }
-    
+
     .intro .flow::after {
         content: url("../images/bg-pattern-intro-right-mobile.svg");
         position: absolute;
@@ -569,10 +571,8 @@ nav a:hover, nav a:focus {
     background: url("../images/bg-pattern-how-we-work-desktop.svg");
 } */
 
-
 .site-footer {
     background: hsl(0, 0%, 98%);
-
 }
 
 .site-footer::before {
@@ -664,7 +664,7 @@ footer nav a {
 
 .attribution {
     padding-block: 1rem;
-    padding-inline: .5rem;
+    padding-inline: 0.5rem;
     text-align: center;
 }
 
