@@ -4,12 +4,27 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Starter</title>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Easybank</title>
     </head>
     <body>
-        <header>
+        <header class="">
+          <a class="skip-link" href="#maincontent">
+            Skip to main content
+          </a>
             <a href="/">
-                <img src="./images/logo.svg" alt="easybank" />
+                <img width="139" height="20" src="./images/logo.svg" alt="easybank" />
             </a>
             <nav>
                 <ul role="list">
@@ -18,31 +33,31 @@
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Careers</a></li>
-                    <li><a href="#">Request Invite</a></li>
+                    <li><a class="button" href="#">Request Invite</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <header>
-                <section>
+        <main id="maincontent">
+            <header class="region">
+                <section class=" | flow ">
                     <h1>Next generation digital banking</h1>
                     <p>
                         Take your financial life online. Your Easybank account
                         will be a one-stop-shop for spending, saving, budgeting,
                         investing, and much more.
                     </p>
-                    <a href="">Request Invite</a>
+                    <a class="button" href="">Request Invite</a>
                 </section>
                 <img src="images/image-mockups.png" alt="" />
             </header>
-            <article>
+            <article class="region flow">
                 <h2>Why choose Easybank?</h2>
                 <p>
                     We leverage Open Banking to turn your bank account into your
                     financial hub. Control your finances like never before.
                 </p>
                 <ul role="list">
-                    <li>
+                    <li class="flow">
                         <img src="/images/icon-online.svg" alt="" />
                         <h3>Online Banking</h3>
                         <p>
@@ -51,7 +66,7 @@
                             world.
                         </p>
                     </li>
-                    <li>
+                    <li class="flow">
                         <img src="/images/icon-budgeting.svg" alt="" />
                         <h3>Simple Budgeting</h3>
                         <p>
@@ -60,7 +75,7 @@
                             your limits.
                         </p>
                     </li>
-                    <li>
+                    <li class="flow">
                         <img src="/images/icon-onboarding.svg" alt="" />
                         <h3>Fast Onboarding</h3>
                         <p>
@@ -69,7 +84,7 @@
                             right away.
                         </p>
                     </li>
-                    <li>
+                    <li class="flow">
                         <img src="/images/icon-api.svg" alt="" />
                         <h3>Open API</h3>
                         <p>
@@ -80,11 +95,11 @@
                     </li>
                 </ul>
             </article>
-            <article>
+            <article class="region"> 
                 <h2>Latest Articles</h2>
                 <ul role="list">
                     <li>
-                        <article>
+                        <article class="flow">
                             <img src="/images/image-currency.jpg" alt="" />
                             <span>By Claire Robinson</span>
                             <a href="#">
@@ -100,7 +115,7 @@
                         </article>
                     </li>
                     <li>
-                        <article>
+                        <article class="flow">
                             <img src="/images/image-restaurant.jpg" alt="" />
                             <span>By Wilson Hutton</span>
                             <a href="#">
@@ -116,7 +131,7 @@
                         </article>
                     </li>
                     <li>
-                        <article>
+                        <article class="flow">
                             <img src="/images/image-plane.jpg" alt="" />
                             <span>By Wilson Hutton</span>
                             <a href="#">
@@ -130,7 +145,7 @@
                         </article>
                     </li>
                     <li>
-                        <article>
+                        <article class="flow">
                             <img src="/images/image-confetti.jpg" alt="" />
                             <span>By Claire Robinson</span>
                             <a href="#">
