@@ -180,7 +180,7 @@ a[class="button"] {
   }
 
   header {
-    position: relative;
+    /* position: relative; */
   }
 /* END GLOBAL */
 
@@ -205,6 +205,16 @@ a[class="button"] {
     align-items: center;
 }
 
+/* .parent {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .parent > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30ch;
+    } */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(
@@ -213,6 +223,11 @@ a[class="button"] {
     );
     gap: var(--gutter, var(--space-s-l));
 }
+
+.grid[data-layout='50-50'] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 50vw, 26rem);
+  }
 /* END COMPOSITION */
 
 /* UTILITIES */
@@ -224,9 +239,96 @@ a[class="button"] {
     padding-block-start: var(--region-space, var(--space-xl-2xl));
     padding-block-end: var(--region-space, var(--space-l-xl));
 }
+
+.wrapper {
+    max-width: var(--wrapper-max-width, 90rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    position: relative;
+}
 /* END UTILITIES */
 
 /* (COMPONENT) BLOCKS */
+
+.site-head nav {
+    background-color: lavenderblush;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.site-head ul {
+    display: inherit;
+    gap: var(--gutter);
+    margin: 0;
+}
+
+.site-head li > a {
+    background-color: lightsalmon;
+    display: block;
+    /* padding-inline: 1.5rem;
+    padding-block: 2rem; */
+    padding-inline: var(--space-s);
+    padding-block: var(--space-s);
+}
+
+.site-head nav button { display: none; }
+
+@media screen and (max-width: 40rem) {
+    .site-head { padding: 0; }
+    .site-head nav {
+        display: block;
+        
+    }
+    .site-head div { 
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 1rem;
+     }
+    .site-head div button { display: inherit; }
+    .site-head ul {
+        display: none;
+    }
+}
+
+/* desktop layout */
+/* .site-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.site-head nav { flex-grow: 1; }
+.site-head ul {
+    margin: 0;
+}
+
+.site-head li {
+}
+
+.site-head a {
+    display: inline-block;
+    padding: 1rem;
+}
+
+.site-head ul li:first-child {
+    background-color: lightgreen;
+    margin-left: auto;
+}
+
+.site-head ul > li:last-child {
+    background-color: lightblue;
+    margin-left: auto;
+} */
+
+.site-foot {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 50vw, 20rem);
+}
 /* END BLOCKS */
 
 /* EXCEPTIONS */
