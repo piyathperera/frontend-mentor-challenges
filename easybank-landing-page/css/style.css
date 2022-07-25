@@ -201,7 +201,7 @@ a[class="button"] {
     display: flex;
     flex-wrap: wrap;
     gap: var(--cluster-space, 1rem);
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
 }
 
@@ -237,16 +237,20 @@ a[class="button"] {
 
 .region {
     padding-block-start: var(--region-space, var(--space-xl-2xl));
-    padding-block-end: var(--region-space, var(--space-l-xl));
+    padding-block-end: var(--region-space, var(--space-xl-2xl));
 }
 
 .wrapper {
-    max-width: var(--wrapper-max-width, 90rem);
+    max-width: var(--wrapper-max-width, 85rem);
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--gutter);
     padding-right: var(--gutter);
     position: relative;
+}
+
+.bg-color {
+    background: var(--bg-color, var(--color-light));
 }
 /* END UTILITIES */
 
@@ -325,9 +329,25 @@ a[class="button"] {
     margin-left: auto;
 } */
 
+.hero {
+    /* --bg-color: var(--clr-very-light-gray); */
+    --bg-color: hsl(0, 0%, 98%);
+    place-items: center;
+}
+
+.features {
+    --bg-color: hsl(220, 16%, 96%);
+}
+
+.articles {
+    --bg-color: hsl(0, 0%, 98%); 
+}
+
 .site-foot {
+    --bg-color: var(--color-primary); 
     --grid-placement: auto-fit;
     --grid-min-item-size: clamp(16rem, 50vw, 20rem);
+    --region-space: var(--space-l-xl);
 }
 /* END BLOCKS */
 
