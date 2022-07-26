@@ -19,28 +19,6 @@
         <title>Easybank</title>
     </head>
     <body>
-        <!-- <header class="site-header | region">
-            <a class="skip-link" href="#maincontent"> Skip to main content </a>
-            <a href="/">
-                <img
-                    width="139"
-                    height="20"
-                    src="./images/logo.svg"
-                    alt="easybank"
-                />
-            </a>
-            <nav>
-                <ul class="parent" role="list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a class="button" href="#">Request Invite</a></li>
-                </ul>
-            </nav>
-        </header> -->
-
         <header class="site-head | wrapper">
             <a class="skip-link" href="#maincontent"> Skip to main content </a>
             <nav>
@@ -54,11 +32,42 @@
                         />
                     </a>
 
-                    <button>Menu</button>
+                    <button
+                        aria-expanded="false"
+                        aria-controls="navbarDropdown"
+                    >
+                        <span class="with-icon" aria-hidden="false">
+                            <svg
+                                class="icon"
+                                viewBox="0 0 12 11"
+                                width="0.75em"
+                                height="0.75em"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <use href="/images/icons.svg#hamburger"></use>
+                            </svg>
+                            Menu
+                        </span>
+
+                        <span class="with-icon" aria-hidden="true">
+                            <svg
+                                class="icon"
+                                viewBox="0 0 10 10"
+                                width="0.75em"
+                                height="0.75em"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <use href="/images/icons.svg#close"></use>
+                            </svg>
+                            Close
+                        </span>
+                    </button>
                 </div>
 
-                <ul class="" role="list">
-                    <li><a href="#">Home</a></li>
+                <ul class="" role="list" aria-hidden="false">
+                    <li><a href="#" aria-current="page">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Blog</a></li>
@@ -77,9 +86,11 @@
                             account will be a one-stop-shop for spending,
                             saving, budgeting, investing, and much more.
                         </p>
-                        <a class="button" href="">Request Invite</a>
+                        <a class="button" href="#">Request Invite</a>
                     </div>
-                    <img src="images/image-mockups.png" alt="" />
+                    <div class="bg-img">
+                        <img src="images/image-mockups.png" alt="" />
+                    </div>
                 </article>
             </header>
             <article class="features | region bg-color">
@@ -166,14 +177,14 @@
                             <img src="/images/image-restaurant.jpg" alt="" />
                             <div class="card-content | flow">
                                 <p>By Wilson Hutton</p>
-                                
-                                    <h3>
-                                      <a href="#">
+
+                                <h3>
+                                    <a href="#">
                                         Treat yourself without worrying about
                                         money
-                                      </a>
-                                    </h3>
-                                
+                                    </a>
+                                </h3>
+
                                 <p>
                                     Our simple budgeting feature allows you to
                                     separate out your spending and set realistic
@@ -186,12 +197,12 @@
                                 <img src="/images/image-plane.jpg" alt="" />
                                 <div class="card-content | flow">
                                     <p>By Wilson Hutton</p>
-                                        <h3>
-                                          <a href="#">
+                                    <h3>
+                                        <a href="#">
                                             Take your Easybank card wherever you
                                             go
-                                          </a>
-                                        </h3>
+                                        </a>
+                                    </h3>
                                     <p>
                                         We want you to enjoy your travels. This
                                         is why we don't charge any fees on
@@ -206,12 +217,12 @@
                                 <img src="/images/image-confetti.jpg" alt="" />
                                 <div class="card-content | flow">
                                     <p>By Claire Robinson</p>
-                                        <h3>
-                                          <a href="#">
+                                    <h3>
+                                        <a href="#">
                                             Our invite-only Beta accounts are
                                             now live!
-                                          </a>
-                                        </h3>
+                                        </a>
+                                    </h3>
                                     <p>
                                         After a lot of hard work by the whole
                                         team, we're excited to launch our closed
@@ -228,11 +239,17 @@
         <footer class="site-foot | region bg-color">
             <div class="grid wrapper">
                 <section class="flow">
-                    <img src="/images/logo.svg" alt="" />
-                    <ul class="cluster" role="list">
+                    <img src="/images/logo-light.svg" alt="" />
+                    <!-- <svg
+                        width="139"
+                        height="20"
+                    >
+                        <use href="/images/icons.svg#logo"></use>
+                    </svg> -->
+                    <ul class="social-links | cluster" role="list">
                         <li>
                             <a href="#"
-                                ><img src="/images/icon-facebook.svg" alt=""
+                                ><img class="icon" src="/images/icon-facebook.svg" alt=""
                             /></a>
                         </li>
                         <li>
