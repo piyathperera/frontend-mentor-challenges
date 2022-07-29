@@ -1,5 +1,6 @@
 //Toggle Navigation button
 const navButton = document.querySelector("button[aria-expanded]");
+const navList = document.querySelector("ul[aria-hidden]");
 const ariaHiddens = document.querySelectorAll("[aria-hidden]");
 
 
