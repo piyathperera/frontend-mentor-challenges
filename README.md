@@ -7,4 +7,5 @@
 - Huddle Landing Page [Live site](https://frontend-mentor-challeneges.netlify.app/huddle-landing-page/) | [Repo](https://github.com/piyathperera/frontend-mentor-challenges/tree/main/huddle-landing-page)
 
 - Sunnyside Agency Landing Page [Live site](https://frontend-mentor-challeneges.netlify.app/sunnyside-agency-landing-page/) | [Repo](https://github.com/piyathperera/frontend-mentor-challenges/tree/main/sunnyside-agency-landing-pagee)
- 
+
+- Easybank Landing Page [Live site](https://piyath-easybank-landing-page.netlify.app) | [Repo](https://github.com/piyathperera/frontend-mentor-challenges/tree/main/easybank-landing-page)

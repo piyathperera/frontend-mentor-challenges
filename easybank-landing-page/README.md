@@ -27,16 +27,16 @@ Your users should be able to:
 
 ### Screenshot
 TODO: Needs Update
-![Desktop layout](./src/assets/images/screenshot_desktop.png)
+![Desktop layout](./images/screenshot_desktop.png)
 Dekstop
 
-![Mobile layout](./src/assets/images/screenshot_mobile.png) 
-Mobile
+<!-- ![Mobile layout](./src/assets/images/screenshot_mobile.png) 
+Mobile -->
 
 ### Links
-TODO: Needs Update
--   [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-with-css-grid-and-flexbox-HyMoJC9Hc)
--   [Live Site](https://frontend-mentor-challeneges.netlify.app/intro-section-with-dropdown-navigation/)
+
+-   [Solution](https://www.frontendmentor.io/solutions/easybank-landing-page-with-vite-cube-css-and-fluid-types-9fX7x5vExJ)
+-   [Live Site](https://piyath-easybank-landing-page.netlify.app/)
 
 ## My process
 
