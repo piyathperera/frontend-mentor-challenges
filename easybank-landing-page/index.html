@@ -20,8 +20,8 @@
     </head>
     <body>
         <header class="site-head | wrapper">
-            <a class="skip-link" href="#maincontent"> Skip to main content </a>
-            <nav>
+            <a class="skip-link" href="#maincontent">Skip to main content</a>
+            <nav aria-label="Main">
                 <div>
                     <a href="/">
                         <img
@@ -31,11 +31,9 @@
                             alt="easybank"
                         />
                     </a>
-
                     <button
                         aria-expanded="false"
-                        aria-controls="navbarDropdown"
-                    >
+                        aria-controls="navbarDropdown">
                         <span class="with-icon" aria-hidden="false">
                             <svg
                                 class="icon"
@@ -43,13 +41,11 @@
                                 width="0.75em"
                                 height="0.75em"
                                 stroke="currentColor"
-                                stroke-width="1.5"
-                            >
+                                stroke-width="1.5">
                                 <use href="/images/icons.svg#hamburger"></use>
                             </svg>
                             Menu
                         </span>
-
                         <span class="with-icon" aria-hidden="true">
                             <svg
                                 class="icon"
@@ -65,8 +61,7 @@
                         </span>
                     </button>
                 </div>
-
-                <ul class="" role="list" aria-hidden="false">
+                <ul role="list" aria-hidden="true">
                     <li><a href="#" aria-current="page">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
@@ -78,6 +73,37 @@
         </header>
         <main id="maincontent">
             <header class="hero | region bg-color">
+                <!--
+                 <div class="">
+                     <article class="grid wrapper" data-layout="50-50">
+                        <div class="hero_content | flow">
+                            <h1>Next generation digital banking</h1>
+                            <p>
+                                Take your financial life online. Your Easybank
+                                account will be a one-stop-shop for spending,
+                                saving, budgeting, investing, and much more.
+                            </p>
+                            <a class="button" href="#">Request Invite</a>
+                        </div>
+
+                        <div class="hero_image">
+                            <div class="image_overlap">
+                                <img src="images/image-mockups.png" alt="" />
+                                <picture>
+                                    <source
+                                        media="(max-width: 60rem)"
+                                        srcset="/images/bg-intro-mobile.svg"
+                                    />
+                                    <img
+                                        src="/images/bg-intro-desktop.svg"
+                                        alt=""
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                    </article> 
+                </div>
+                -->
                 <article class="grid wrapper" data-layout="50-50">
                     <div class="hero_content | flow">
                         <h1>Next generation digital banking</h1>
@@ -88,8 +114,20 @@
                         </p>
                         <a class="button" href="#">Request Invite</a>
                     </div>
-                    <div class="bg-img">
-                        <img src="images/image-mockups.png" alt="" />
+                    <div class="hero_image">
+                        <div class="image_overlap">
+                            <img src="images/image-mockups.png" alt="" />
+                            <!-- <picture>
+                                <source
+                                    media="(max-width: 60rem)"
+                                    srcset="/images/bg-intro-mobile.svg"
+                                />
+                                <img
+                                    src="/images/bg-intro-desktop.svg"
+                                    alt=""
+                                />
+                            </picture> -->
+                        </div>
                     </div>
                 </article>
             </header>
@@ -155,7 +193,7 @@
                     <ul class="grid | mt-l-xl" role="list">
                         <li class="card | bg-color">
                             <article>
-                                <img src="/images/image-currency.jpg" alt="" />
+                                <img src="/images/image-currency.jpg" alt="Banknotes of different currencies" />
                                 <div class="card-content | flow">
                                     <p>By Claire Robinson</p>
                                     <h3>
@@ -174,7 +212,7 @@
                             </article>
                         </li>
                         <li class="card | bg-color">
-                            <img src="/images/image-restaurant.jpg" alt="" />
+                            <img src="/images/image-restaurant.jpg" alt="Gourmet food plate on a restaurant table." />
                             <div class="card-content | flow">
                                 <p>By Wilson Hutton</p>
 
@@ -194,7 +232,7 @@
                         </li>
                         <li class="card | flow bg-color">
                             <article>
-                                <img src="/images/image-plane.jpg" alt="" />
+                                <img src="/images/image-plane.jpg" alt="View from a flying plane with wing of the plan in foreground and sun-rising from background." />
                                 <div class="card-content | flow">
                                     <p>By Wilson Hutton</p>
                                     <h3>
@@ -214,7 +252,7 @@
                         </li>
                         <li class="card | flow bg-color">
                             <article>
-                                <img src="/images/image-confetti.jpg" alt="" />
+                                <img src="/images/image-confetti.jpg" alt="Confetti scattering on a blue background" />
                                 <div class="card-content | flow">
                                     <p>By Claire Robinson</p>
                                     <h3>
@@ -238,45 +276,100 @@
         </main>
         <footer class="site-foot | region bg-color">
             <div class="grid wrapper">
-                <section class="flow">
-                    <img src="/images/logo-light.svg" alt="" />
-                    <!-- <svg
-                        width="139"
-                        height="20"
-                    >
-                        <use href="/images/icons.svg#logo"></use>
-                    </svg> -->
+                <section class="site-brand | flow">
+                    <img src="/images/logo-light.svg" alt="easybank" />
                     <ul class="social-links | cluster" role="list">
                         <li>
-                            <a href="#"
-                                ><img class="icon" src="/images/icon-facebook.svg" alt=""
-                            /></a>
+                            <a href="#">
+                                <svg
+                                    role="img"
+                                    focusable="false"
+                                    width="20"
+                                    height="20"
+                                    class="icon"
+                                >
+                                    <title>Facebook</title>
+                                    <use
+                                        href="/images/icons.svg#facebook"
+                                        aria-hidden="true"
+                                    ></use>
+                                </svg>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"
-                                ><img src="/images/icon-youtube.svg" alt=""
-                            /></a>
+                            <a href="#">
+                                <svg
+                                    role="img"
+                                    focusable="false"
+                                    width="21"
+                                    height="20"
+                                    class="icon"
+                                >
+                                    <title>Youtube</title>
+                                    <use
+                                        href="/images/icons.svg#youtube"
+                                        aria-hidden="true"
+                                    ></use>
+                                </svg>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"
-                                ><img src="/images/icon-twitter.svg" alt=""
-                            /></a>
+                            <a href="#">
+                                <svg
+                                    width="21"
+                                    height="18"
+                                    class="icon"
+                                    role="img"
+                                    focusable="false"
+                                >
+                                    <title>Twitter</title>
+                                    <use
+                                        href="/images/icons.svg#twitter"
+                                        aria-hidden="true"
+                                    ></use>
+                                </svg>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"
-                                ><img src="/images/icon-pinterest.svg" alt=""
-                            /></a>
+                            <a href="#">
+                                <svg
+
+                                width="21"
+                                    height="21"
+                                    class="icon"
+                                    role="img"
+                                    focusable="false"
+                                >
+                                    <title>Pinterest</title>
+                                    <use
+                                        href="/images/icons.svg#pinterest"
+                                        aria-hidden="true"
+                                    ></use>
+                                </svg>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"
-                                ><img src="/images/icon-instagram.svg" alt=""
-                            /></a>
+                            <a href="#">
+                                <svg
+                                    width="21"
+                                    height="20"
+                                    class="icon"
+                                    role="img"
+                                    focusable="false"
+                                >
+                                    <title>Instagram</title>
+                                    <use
+                                        href="/images/icons.svg#instagram"
+                                        aria-hidden="true"
+                                    ></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </section>
 
                 <nav>
-                    <ul role="list" class="foot-nav-list | flow">
+                    <ul role="list" aria-label="Footer" class="foot-nav-list | flow">
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Blog</a></li>
@@ -288,18 +381,23 @@
 
                 <section class="flow">
                     <a class="button" href="#">Request Invite</a>
-                    <p>© Easybank. All Rights Reserved</p>
+                    <div class="copyright">
+                        <p>© Easybank. All Rights Reserved</p>
+                    </div>
+                    <div class="attribution | flow">
+                        <p>
+                            Challenge by
+                            <a
+                                href="https://www.frontendmentor.io?ref=challenge"
+                                target="_blank"
+                                >Frontend Mentor</a
+                            >. Coded by
+                            <a href="https://piyathperera.com.au"
+                                >Piyath Perera</a
+                            >.
+                        </p>
+                    </div>
                 </section>
-            </div>
-            <div class="attribution | region">
-                <p>
-                    Challenge by
-                    <a
-                        href="https://www.frontendmentor.io?ref=challenge"
-                        target="_blank"
-                        >Frontend Mentor</a
-                    >. Coded by <a href="#">Piyath Perera</a>.
-                </p>
             </div>
         </footer>
 
