@@ -7,6 +7,7 @@
     --clr-light-grayish-blue: hsl(220, 16%, 96%);
     --clr-very-light-gray: hsl(0, 0%, 98%);
     --clr-white: hsl(0, 0%, 100%);
+    --clr-opacity-reduced: hsla(0, 0%, 100%, 0.1);
 
     --color-light: var(--clr-white);
     --color-on-light: var(--clr-grayish-blue);
@@ -17,7 +18,7 @@
     --color-on-secondary: #fff;
     --color-accent: var(--clr-lime-green);
     --color-on-accent: var(--clr-light-grayish-blue);
-    --color-on-accent-state-hover: hsla(0, 0%, 98%, 0.5);
+    --color-on-accent-state-hover: hsla(0, 0%, 100%, 1);
     --color-gradient-accent: linear-gradient(
         90deg,
         hsl(136deg 65% 51%) 0%,
@@ -273,10 +274,14 @@ a[class="button"] {
 a[class="button"] {
     background: var(--color-gradient-accent);
     color: var(--clr-white);
-    font-size: var(--step-0);
     border-radius: 50px;
     padding-inline: var(--space-m);
     padding-block: var(--space-2xs);
+}
+
+a[class="button"]:hover {
+    background-color: var(--color-on-accent-state-hover);
+    opacity: 0.75;
 }
 /* END UTILITIES */
 
@@ -292,42 +297,71 @@ h1, h2, h3, button {
 .site-head nav {
     background-color: var(--color-light);
     display: flex;
+    
     align-items: center;
     justify-content: space-between;
 }
 
-.site-head ul {
+.main-nav-list {
     --gutter: var(--space-s);
     display: inherit;
+    flex-grow: 1;
+    /* justify-content: space-between; */
     align-items: center;
     gap: var(--gutter);
     margin: 0;
 }
 
-.site-head li {
+.main-nav-list li {
     max-width: unset;
+    position: relative;
+}
+.main-nav-list li:first-child {
+    margin-left: auto;
+}
+.main-nav-list li:nth-child(5) {
+    margin-right: auto;
 }
 
-.site-head li > a:not([class="button"]) {
-    display: block;
-    padding-inline: var(--space-s);
-    padding-block: var(--space-s); 
+.main-nav-list > * {
+    font-size: var(--step--1);
 }
 
-.site-head a:not(:focus) {
+.main-nav-list a:not(:focus) {
     text-decoration: none;
 }
 
-.site-head a:hover {
-    text-decoration: underline;
+.main-nav-list li > a:not([class="button"]):hover {
     color: var(--color-primary);
 }
 
-.site-head a[aria-current="page"] {
+.main-nav-list li:not([class="cta"])::after {
+    content: "";
+    height: .25rem;
+    position: absolute;
+    bottom: 0;
+    background: var(--color-gradient-accent);
+}
+
+@media screen and (min-width: 60rem) {
+    .main-nav-list li:not([class="cta"]):hover::after {
+        width: 100%;
+    }
+}
+
+.main-nav-list a[aria-current="page"] {
     font-weight: bold;
-    border-bottom: .4rem solid;
-    border-bottom-color: var(--color-gradient-accent);
-    border-image: var(--color-primary);
+}
+
+.main-nav-list li > a:not([class="button"]) {
+    display: block;
+    padding-inline: var(--space-s);
+    padding-block: var(--space-s);
+}
+
+
+:is(.main-nav-list) a:focus,:is(.main-nav-list) a[class="button"]:focus  {
+    outline-offset: -0.4ch;
 }
 
 :is(.site-head, .hero) a[class="button"]:focus, .site-head li > a:focus {
@@ -338,8 +372,10 @@ h1, h2, h3, button {
     display: none;
  }
 
-@media screen and (max-width: 70rem) {
-    .site-head { padding: 0; }
+@media screen and (max-width: 60rem) {
+    .site-head { padding: 0;
+    font-size: var(--step-0);
+ }
     .site-head nav { display: block; }
     .site-head div { 
         display: flex; 
@@ -362,7 +398,8 @@ h1, h2, h3, button {
      span[aria-hidden="false"] { display: inherit; }
      span[aria-hidden="true"] { display: none; }
 
-     .site-head ul {
+     .main-nav-list {
+        display: inherit;
         max-height: 0;
         overflow: hidden;
         transition: max-height .3s ease-in-out; 
@@ -371,10 +408,10 @@ h1, h2, h3, button {
         max-height: 100rem;
      }
 
-     .site-head li > a {
-        border-bottom: 0.01rem solid currentColor; }    
-    .site-head a[aria-current="page"] {
-        
+    .site-head li > a {
+        border-bottom: 0.01rem solid currentColor; 
+    }    
+    .site-head a[aria-current="page"] {   
         border-bottom: 0.01rem solid currentColor;
     }
     .site-head li > a[class="button"] {
@@ -407,7 +444,7 @@ h1, h2, h3, button {
     background-image: url("/images/bg-intro-desktop.svg");
 }
 
-@media screen and (max-width: 70rem) {
+@media screen and (max-width: 60rem) {
     .hero { --region-space: var(--space-xl-2xl); }
     .hero .grid[data-layout='50-50'] {
         grid-auto-flow: row;
@@ -437,7 +474,7 @@ h1, h2, h3, button {
 }
 
 :is(.features, .articles) ul h3 {
-    font-size: var(--step-2);
+    font-size: var(--step-1);
 }
 
 .articles {
@@ -465,7 +502,9 @@ h1, h2, h3, button {
     padding-block-start: var(--space-s);
     padding-block-end: var(--space-s);
 }
-.card-content h3 { max-width: unset; --flow-space: .5rem }
+.card .card-content h3 { 
+    max-width: unset;
+     --flow-space: .5rem }
 .card-content > :first-child { font-size: var(--step-0); }
 .card-content > a { display: inline-block; }
 
@@ -507,10 +546,6 @@ h1, h2, h3, button {
     margin-block-end: 0;
 }
 
-.social-links > * {
-outline: 1px solid hotpink;
-}
-
 .social-links .icon {
     width: 100%;
     height: 100%;
@@ -519,6 +554,10 @@ outline: 1px solid hotpink;
 .foot-nav-list > * {
     flex: 1 1 10ch;
     align-self: baseline;
+}
+
+.foot-nav-list a {
+font-size: var(--step-1);
 }
 
 .attribution {
