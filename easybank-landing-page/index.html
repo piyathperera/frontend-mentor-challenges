@@ -33,8 +33,9 @@
                     </a>
                     <button
                         aria-expanded="false"
-                        aria-controls="navbarDropdown">
-                        <span class="with-icon" aria-hidden="false">
+                        aria-controls="navbarDropdown"
+                    >
+                        <!-- <span class="with-icon" aria-hidden="false">
                             <svg
                                 class="icon"
                                 viewBox="0 0 12 11"
@@ -58,52 +59,48 @@
                                 <use href="/images/icons.svg#close"></use>
                             </svg>
                             Close
+                        </span> -->
+                        <span class="with-icon">
+                            <svg
+                                class="icon"
+                                aria-hidden="false"
+                                viewBox="0 0 12 11"
+                                width="0.75em"
+                                height="0.75em"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <use href="/images/icons.svg#hamburger"></use>
+                            </svg>
+                            <svg
+                                class="icon"
+                                aria-hidden="true"
+                                viewBox="0 0 10 10"
+                                width="0.75em"
+                                height="0.75em"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <use href="/images/icons.svg#close"></use>
+                            </svg>
+                            Menu
                         </span>
                     </button>
                 </div>
-                <ul class="main-nav-list" role="list" aria-hidden="true">
+                <ul class="main-nav-list" role="list" data-visible="false">
                     <li><a href="#" aria-current="page">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Careers</a></li>
-                    <li class="cta"><a class="button" href="#">Request Invite</a></li>
+                    <li class="cta">
+                        <a class="button" href="#">Request Invite</a>
+                    </li>
                 </ul>
             </nav>
         </header>
         <main id="maincontent">
             <header class="hero | region bg-color">
-                <!--
-                 <div class="">
-                     <article class="grid wrapper" data-layout="50-50">
-                        <div class="hero_content | flow">
-                            <h1>Next generation digital banking</h1>
-                            <p>
-                                Take your financial life online. Your Easybank
-                                account will be a one-stop-shop for spending,
-                                saving, budgeting, investing, and much more.
-                            </p>
-                            <a class="button" href="#">Request Invite</a>
-                        </div>
-
-                        <div class="hero_image">
-                            <div class="image_overlap">
-                                <img src="images/image-mockups.png" alt="" />
-                                <picture>
-                                    <source
-                                        media="(max-width: 60rem)"
-                                        srcset="/images/bg-intro-mobile.svg"
-                                    />
-                                    <img
-                                        src="/images/bg-intro-desktop.svg"
-                                        alt=""
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </article> 
-                </div>
-                -->
                 <article class="grid wrapper" data-layout="50-50">
                     <div class="hero_content | flow">
                         <h1>Next generation digital banking</h1>
@@ -117,16 +114,6 @@
                     <div class="hero_image">
                         <div class="image_overlap">
                             <img src="images/image-mockups.png" alt="" />
-                            <!-- <picture>
-                                <source
-                                    media="(max-width: 60rem)"
-                                    srcset="/images/bg-intro-mobile.svg"
-                                />
-                                <img
-                                    src="/images/bg-intro-desktop.svg"
-                                    alt=""
-                                />
-                            </picture> -->
                         </div>
                     </div>
                 </article>
@@ -193,7 +180,10 @@
                     <ul class="grid | mt-l-xl" role="list">
                         <li class="card | bg-color">
                             <article>
-                                <img src="/images/image-currency.jpg" alt="Banknotes of different currencies" />
+                                <img
+                                    src="/images/image-currency.jpg"
+                                    alt="Banknotes of different currencies"
+                                />
                                 <div class="card-content | flow">
                                     <p>By Claire Robinson</p>
                                     <h3>
@@ -212,7 +202,10 @@
                             </article>
                         </li>
                         <li class="card | bg-color">
-                            <img src="/images/image-restaurant.jpg" alt="Gourmet food plate on a restaurant table." />
+                            <img
+                                src="/images/image-restaurant.jpg"
+                                alt="Gourmet food plate on a restaurant table."
+                            />
                             <div class="card-content | flow">
                                 <p>By Wilson Hutton</p>
 
@@ -232,7 +225,10 @@
                         </li>
                         <li class="card | flow bg-color">
                             <article>
-                                <img src="/images/image-plane.jpg" alt="View from a flying plane with wing of the plan in foreground and sun-rising from background." />
+                                <img
+                                    src="/images/image-plane.jpg"
+                                    alt="View from a flying plane with wing of the plan in foreground and sun-rising from background."
+                                />
                                 <div class="card-content | flow">
                                     <p>By Wilson Hutton</p>
                                     <h3>
@@ -252,7 +248,10 @@
                         </li>
                         <li class="card | flow bg-color">
                             <article>
-                                <img src="/images/image-confetti.jpg" alt="Confetti scattering on a blue background" />
+                                <img
+                                    src="/images/image-confetti.jpg"
+                                    alt="Confetti scattering on a blue background"
+                                />
                                 <div class="card-content | flow">
                                     <p>By Claire Robinson</p>
                                     <h3>
@@ -333,8 +332,7 @@
                         <li>
                             <a href="#">
                                 <svg
-
-                                width="21"
+                                    width="21"
                                     height="21"
                                     class="icon"
                                     role="img"
@@ -369,7 +367,11 @@
                 </section>
 
                 <nav>
-                    <ul role="list" aria-label="Footer" class="foot-nav-list | flow">
+                    <ul
+                        role="list"
+                        aria-label="Footer"
+                        class="foot-nav-list | flow"
+                    >
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Blog</a></li>

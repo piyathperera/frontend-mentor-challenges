@@ -395,18 +395,18 @@ h1, h2, h3, button {
         padding-inline: 1rem;
      }
 
-     span[aria-hidden="false"] { display: inherit; }
-     span[aria-hidden="true"] { display: none; }
+     svg[aria-hidden="false"] { display: inherit; }
+     svg[aria-hidden="true"] { display: none; }
 
-     .main-nav-list {
+     .main-nav-list[data-visible="true"] {
         display: inherit;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .3s ease-in-out; 
+        /* overflow: hidden;
+        transition: max-height .3s ease-in-out;  */
     }
-     .site-head ul[aria-hidden="false"] {
-        max-height: 100rem;
+    .main-nav-list[data-visible="false"] {
+        display: none;
      }
+
 
     .site-head li > a {
         border-bottom: 0.01rem solid currentColor; 
