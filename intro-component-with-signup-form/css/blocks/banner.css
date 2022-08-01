@@ -1,0 +1,11 @@
+.banner {
+    --region-space: var(--space-xs-s);
+    background-color: var(--color-secondary);
+    color: white;
+    border-radius: var(--step--2);
+    text-align: center;
+}
+
+.banner strong {
+    font-weight: 600;
+}

@@ -1,0 +1,23 @@
+.button {
+    --region-space: var(--space-xs-s);
+    --vertical-offset: -6px;
+
+    background-color: var(--color-success);
+    border-color: transparent;
+    color: white;
+    padding-block-start: var(--space-xs-s);
+    padding-block-end: var(--space-xs-s);
+
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15ch;
+    text-align: center;
+
+    border-radius: var(--step--2);
+    box-shadow: inset 0px -6px 0px 0px rgba(0,0,0,0.1);
+}
+
+/* .button :focus {
+    outline-offset: 0.3ch;
+    background-color: lightblue;
+} */

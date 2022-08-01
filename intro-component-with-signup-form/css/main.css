@@ -5,10 +5,17 @@
 @import "./global/styles.css";
 
 @import "blocks/section.css";
+@import "blocks/hero.css";
+@import "blocks/banner.css";
 @import "blocks/form.css";
+@import "blocks/button.css";
 @import "blocks/footer.css";
+
 @import "compositions/grid.css";
+
 @import "./utilities/flow.css"; 
 @import "./utilities/wrapper.css"; 
 @import "./utilities/region.css"; 
+@import "./utilities/shadow.css"; 
+
 /* @import "exceptions/*.css";  */
