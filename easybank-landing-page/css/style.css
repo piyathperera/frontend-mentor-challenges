@@ -274,7 +274,7 @@ a[class="button"] {
 
 a[class="button"] {
     background: var(--color-gradient-accent);
-    color: var(--clr-dark-blue);
+    color: var(--color-light);
     border-radius: 50px;
     padding-inline: var(--space-m);
     padding-block: var(--space-2xs);
@@ -541,7 +541,7 @@ h1, h2, h3, button {
 }
 
 .site-foot a[class="button"] {
-    color: var(--clr-dark-blue);  
+    color: var(--color-light);
 }
 
 .site-foot .site-brand {
