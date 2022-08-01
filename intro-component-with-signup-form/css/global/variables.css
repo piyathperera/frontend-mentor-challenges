@@ -6,6 +6,14 @@
     --dark-blue-neutral-color: hsl(249, 10%, 26%);
     --grayish-blue-neutral-color: hsl(246, 25%, 77%);
 
+    --color-light: hsl(0, 0, 100%);
+    --color-dark: var(--dark-blue-neutral-color);
+    --color-primary: var(--red-color);
+    --color-secondary: var(--blue-accent-color);
+
+    --color-sucess: var(--green-color);
+    --color-error: var(--red-color);
+
     /* @link https://utopia.fyi/type/calculator?c=280,21,1.2,1440,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
     --step--2: clamp(0.91rem, calc(0.9rem + 0.07vw), 0.96rem);

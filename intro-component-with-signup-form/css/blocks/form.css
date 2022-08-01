@@ -1,0 +1,14 @@
+.form-container {
+    /* --color-bg: var(--color-light);  */
+    --color-bg: hsl(0, 0%, 100%);
+    --region-space: var(--space-s-m);
+}
+
+
+.form-fields > li * {
+    display: block;
+}
+
+.form-fields input {
+    width: 100%;
+}
