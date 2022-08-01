@@ -3,14 +3,14 @@
     --clr-dark-blue: hsl(233, 26%, 24%);
     --clr-lime-green: hsl(136, 65%, 51%);
     --clr-bright-cyan: hsl(192, 70%, 51%);
-    --clr-grayish-blue: hsl(233, 8%, 62%);
-    --clr-light-grayish-blue: hsl(220, 16%, 96%);
+    --clr-not-light-grayish-blue: hsl(0, 0%, 35%);
+    --clr-light-grayish-blue: hsl(0, 0%, 58%);
     --clr-very-light-gray: hsl(0, 0%, 98%);
     --clr-white: hsl(0, 0%, 100%);
     --clr-opacity-reduced: hsla(0, 0%, 100%, 0.1);
 
     --color-light: var(--clr-white);
-    --color-on-light: var(--clr-grayish-blue);
+    --color-on-light: var(--clr-not-light-grayish-blue);
     --color-dark: hsl(270, 9%, 17%);
     --color-primary: var(--clr-dark-blue);
     --color-on-primary: #fff;
@@ -177,14 +177,15 @@ a[class="button"] {
     transform: translateY(0%);
   }
 
-  .visually-hidden {
-    clip: rect(0 0 0 0);
+  .sr-only {
+    clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
     height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
     width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
   }
 /* END GLOBAL */
 
@@ -517,6 +518,11 @@ h1, h2, h3, button {
     --grid-placement: auto-fit;
     --grid-min-item-size: clamp(16rem, 50vw, 20rem);
 }
+
+.site-foot p {
+    color: var(--clr-very-light-gray);
+}
+
 .site-foot div img {
     fill: white;
 }
