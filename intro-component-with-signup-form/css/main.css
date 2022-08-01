@@ -4,8 +4,10 @@
 @import "./global/variables.css";
 @import "./global/styles.css";
 
-/* @import "blocks/*.css"; */
-/* @import "compositions/*.css";  */
+@import "blocks/section.css";
+@import "blocks/form.css";
+@import "blocks/footer.css";
+@import "compositions/grid.css";
 @import "./utilities/flow.css"; 
 @import "./utilities/wrapper.css"; 
 @import "./utilities/region.css"; 

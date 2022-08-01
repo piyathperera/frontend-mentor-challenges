@@ -14,7 +14,7 @@
 
         <title>Intro component with sign up form</title>
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css" />
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
         <style>
             .attribution {
@@ -27,59 +27,69 @@
         </style>
     </head>
     <body>
-        <main>
-            <header>
-                <h1>Learn to code by watching others</h1>
-                <p>
-                    See how experienced developers solve problems in real-time.
-                    Watching scripted tutorials is great, but understanding how
-                    developers think is invaluable.
-                </p>
-            </header>
-            <article>
-                <p>Try it free 7 days then $20/mo. thereafter</p>
-                <form>
-                    <ul>
-                        <li>
-                            <label for="firstName">First Name</label
-                            ><input id="firstName" type="text" />
-                        </li>
-                        <li>
-                            <label for="lastName">Last Name</label
-                            ><input id="lastName" type="text" />
-                        </li>
-                        <li>
-                            <label for="email">Email Address</label
-                            ><input id="email" type="text" />
-                        </li>
-                        <li>
-                            <label for="password">Password</label
-                            ><input id="password" type="text" />
-                        </li>
-                        <li>
-                            <label for=""></label
-                            ><input
-                                type="button"
-                                value="Claim your free trial"
-                            />
-                        </li>
-                    </ul>
-                </form>
-                <p>
-                    By clicking the button, you are agreeing to our
-                    <a href="#">Terms and Services</a>
-                </p>
-            </article>
+        <main class="section">
+            <div class="hero | grid wrapper region" data-layout="50-50">
+                <header>
+                    <div class="flow">
+                        <h1>Learn to code by watching others</h1>
+                        <p>
+                            See how experienced developers solve problems in
+                            real-time. Watching scripted tutorials is great, but
+                            understanding how developers think is invaluable.
+                        </p>
+                    </div>
+                </header>
+                <article class="flow">
+                    <p>Try it free 7 days then $20/mo. thereafter</p>
+                    <div class="form-container | section region wrapper flow">
+                        <form>
+                            <div role="group" aria-labelledby="signup_head">
+                                <h2 id="signup_head" class="sr-only">Sign up</h2>
+                                <ul role="list" class="form-fields flow">
+                                    <li>
+                                        <label for="firstName">First Name</label
+                                        ><input id="firstName" type="text" />
+                                    </li>
+                                    <li>
+                                        <label for="lastName">Last Name</label
+                                        ><input id="lastName" type="text" />
+                                    </li>
+                                    <li>
+                                        <label for="email">Email Address</label
+                                        ><input id="email" type="text" />
+                                    </li>
+                                    <li>
+                                        <label for="password">Password</label
+                                        ><input id="password" type="text" />
+                                    </li>
+                                    <li>
+                                        <label for=""></label
+                                        ><input
+                                            type="button"
+                                            value="Claim your free trial"
+                                        />
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                        <p>
+                            By clicking the button, you are agreeing to our
+                            <a href="#">Terms and Services</a>
+                        </p>
+                    </div>
+                </article>
+            </div>
         </main>
 
         <footer>
-            <p>
+            <p class="wrapper">
                 Challenge by
                 <a
                     href="https://www.frontendmentor.io?ref=challenge"
                     target="_blank"
                     >Frontend Mentor</a
-                >. Coded by <a href="#">Your Name Here</a>.
+                >. Coded by
+                <a href="https://piyathperera.com.au">Piyath Perera</a>.
             </p>
         </footer>
     </body>
