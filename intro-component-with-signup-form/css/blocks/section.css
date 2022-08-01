@@ -1,0 +1,12 @@
+.section {
+    /* --region-space: var(--space-l-2xl); */
+    background: var(--color-bg);
+}
+
+main.section  {
+   --color-bg: var(--color-primary); 
+}
+
+/* form.section {
+   --color-bg: var(--color-light); 
+} */
