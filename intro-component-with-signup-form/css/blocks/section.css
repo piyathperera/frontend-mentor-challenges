@@ -1,10 +1,12 @@
 .section {
     /* --region-space: var(--space-l-2xl); */
-    background: var(--color-bg);
+    background-color: var(--color-bg);
 }
 
-main.section  {
-   --color-bg: var(--color-primary); 
+main {
+   /* --region-space: var(--space-2xl-3xl); */
+   --color-bg: var(--color-primary);
+   background-image: url("/images/bg-intro-desktop.png");
 }
 
 /* form.section {

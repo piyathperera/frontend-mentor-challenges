@@ -1,3 +1,4 @@
 footer {
+    --region-space: var(--space-xs-s);
     background: var(--color-primary);
 }

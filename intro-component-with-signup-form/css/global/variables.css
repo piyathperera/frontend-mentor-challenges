@@ -11,7 +11,7 @@
     --color-primary: var(--red-color);
     --color-secondary: var(--blue-accent-color);
 
-    --color-sucess: var(--green-color);
+    --color-success: var(--green-color);
     --color-error: var(--red-color);
 
     /* @link https://utopia.fyi/type/calculator?c=280,21,1.2,1440,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
@@ -53,7 +53,7 @@
     --font-base: 'Poppins', sans-serif;
 
     --gutter: var(--space-s-m);
-    --border-radius: var(--size-step-1);
+    --border-radius: var(--step-1);
     --transition-base: 250ms ease;
     --transition-movement: 200ms linear;
     --transition-fade: 200ms ease;
