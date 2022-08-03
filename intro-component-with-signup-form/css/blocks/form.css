@@ -3,11 +3,20 @@
     --color-bg: hsl(0, 0%, 100%);
     --region-space: var(--space-s-m);
     border-radius: var(--step--2);
+    color: var(--color-dark);
 }
-
+.form-container a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
 
 .form-fields > li * {
     display: block;
+    --flow-space: .25rem;
+}
+
+.form-fields li {
+    position: relative;
 }
 
 .form-fields label {
@@ -17,9 +26,16 @@
 .form-fields input {
     width: 100%;
     padding: 1rem 2rem;
-    border: 2px solid currentColor;
+    /* margin-block-start: .25rem; */
+    border: 3px solid currentColor;
     border-radius: var(--step--2);
 }
+
+.form-fields svg {
+    position: absolute;
+    top: 54px;
+    right: 20px;
+  }
 
 .form-fields input:focus {
     outline: 3px solid currentColor;
@@ -28,3 +44,20 @@
 .form-fields input[type="button"] {
     line-height: unset;
 }
+
+.form-fields input[aria-invalid="true"] {
+    border-color: var(--color-error);
+  }
+
+  .error {
+    color: var(--color-error);
+    font-size: var(--step--1);
+  }
+
+  input[aria-invalid="false"] ~ svg {
+    visibility: hidden;
+  }
+
+  input[aria-invalid="true"] ~ svg {
+    visibility: visible;
+  }

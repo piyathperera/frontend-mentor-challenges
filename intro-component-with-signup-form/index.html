@@ -44,33 +44,44 @@
                         <p class="wrapper"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
                     </div>
                     <div class="form-container | section region wrapper flow shadow">
-                        <form>
+                        <form id="signup">
                             <div role="group" aria-labelledby="signup_head">
                                 <h2 id="signup_head" class="sr-only">Sign up</h2>
-                                <ul role="list" class="form-fields flow">
-                                    <li>
-                                        <label for="firstName">First Name</label
-                                        ><input id="firstName" type="text" />
+                                <ul role="list" class="form-fields | flow">
+                                    <li class="flow">
+                                        <label for="firstname">First Name</label
+                                        ><input id="firstname" type="text" aria-describedby="firstnameError" required/>
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="/images/icons.svg#error"></use>
+                                        </svg>
+                                        <!-- <div id="firstnameError"></div> -->
                                     </li>
-                                    <li>
-                                        <label for="lastName">Last Name</label
-                                        ><input id="lastName" type="text" />
+                                    <li  class="flow">
+                                        <label for="lastname">Last Name</label
+                                        ><input id="lastname" type="text" aria-describedby="lastnameError" required/>
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="/images/icons.svg#error"></use>
+                                        </svg>
+                                        <!-- <div id="lastnameError"></div> -->
                                     </li>
-                                    <li>
+                                    <li class="flow">
                                         <label for="email">Email Address</label
-                                        ><input id="email" type="text" />
+                                        ><input id="email" type="email" aria-describedby="emailError" required/>
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="/images/icons.svg#error"></use>
+                                        </svg>
+                                        <!-- <div id="emailError"></div> -->
                                     </li>
-                                    <li>
+                                    <li class="flow">
                                         <label for="password">Password</label
-                                        ><input id="password" type="text" />
+                                        ><input id="password" type="password" aria-describedby="passwordError" minlength="6" required/>
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="/images/icons.svg#error"></use>
+                                        </svg>
+                                        <!-- <div id="passwordError"></div> -->
                                     </li>
                                     <li>
-                                        <label for=""></label
-                                        ><input
-                                        class="button"
-                                            type="button"
-                                            value="Claim your free trial"
-                                        />
+                                        <button class="button" type="submit">Claim your free trial</button>
                                     </li>
                                 </ul>
                             </div>
@@ -84,7 +95,7 @@
             </div>
         </main>
 
-        <footer>
+        <footer class="region">
             <p class="wrapper">
                 Challenge by
                 <a
@@ -95,5 +106,6 @@
                 <a href="https://piyathperera.com.au">Piyath Perera</a>.
             </p>
         </footer>
+        <script src="main.js"></script>
     </body>
 </html>

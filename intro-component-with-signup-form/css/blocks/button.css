@@ -2,6 +2,7 @@
     --region-space: var(--space-xs-s);
     --vertical-offset: -6px;
 
+    width: 100%;
     background-color: var(--color-success);
     border-color: transparent;
     color: white;
