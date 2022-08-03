@@ -1,9 +1,8 @@
 .hero {
     --wrapper-max-width: 90rem;
     place-items: center;
-    
 }
 
-/* .hero header {
-    padding-inline: 2rem;
-} */
+.hero header {
+    color: white;
+}
