@@ -55,7 +55,7 @@ Mobile -->
 
 ### What I learned
 
-I learned to Be the browser’s mentor, not its micromanager with help of [Andy Bell's Talk](https://www.youtube.com/watch?v=5uhIiI9Ld5M) and his [CUBE CSS](https://cube.fyi/) methodology helped to maintain CSS more readable, maintainable and create a good enough foundation for the content in any form of design with progressive enhancement in mind.
+I learned to how to maintain CSS more readable, maintainable and create a good enough foundation for the content in any form of design with progressive enhancement in mind with help of [Andy Bell's Talk](https://www.youtube.com/watch?v=5uhIiI9Ld5M) and his [CUBE CSS](https://cube.fyi/) methodology.
 
 Design is more responsive with the help of [Utopia](https://utopia.fyi/) for its maths and magic to produce Fluid types for Font-sizes and Fluid spaces for padding, margins. Need to learn more about Design tokens in making them as well as using them in projects.
 
