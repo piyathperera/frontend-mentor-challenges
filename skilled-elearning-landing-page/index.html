@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/assets/favicon-32x32.png"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/screen.css" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <header class="site-header region">
+            <nav class="wrapper">
+                <a href="#logo">Skilled</a>
+                <a href="" class="button">Get Started</a>
+            </nav>
+        </header>
+        <main>
+            <article class="hero region wrapper">
+                <div class="hero-content flow">
+                    <h1>Maximize skill, minimize budget</h1>
+                    <p>
+                        Our modern courses across a range of in-demand skills
+                        will give you the knowledge you need to live the life
+                        you want.
+                    </p>
+                    <a href="" class="button">Get Started</a>
+                </div>
+
+                <!-- <img
+                        src="/assets/image-hero-desktop.png"
+                        alt=""
+                    /> -->
+
+                <picture>
+                    <source
+                        srcset="/assets/image-hero-desktop.png"
+                        media="(min-width: 800px)"
+                    />
+                    <source
+                        srcset="/assets/image-hero-tablet.png"
+                        media="(min-width: 600px)"
+                    />
+                    <img src="/assets/image-hero-mobile.png" alt="MDN Web Docs" />
+                </picture>
+            </article>
+
+            <article class="courses | region">
+                <div class="wrapper">
+                    <ul role="list" class="grid | flow">
+                        <li>
+                            <h2>Check out our most popular courses!</h2>
+                        </li>
+                        <li class="flow">
+                            <img src="/assets/icon-animation.svg" alt="" />
+                            <h3>Animation</h3>
+                            <p>
+                                Learn the latest animation techniques to create
+                                stunning motion design and captivate your
+                                audience.
+                            </p>
+                            <a href="">Get Started</a>
+                        </li>
+                        <li class="flow">
+                            <img src="/assets/icon-design.svg" alt="" />
+                            <h3>Design</h3>
+                            <p>
+                                Create beautiful, usable interfaces to help
+                                shape the future of how the web looks.
+                            </p>
+                            <a href="">Get Started</a>
+                        </li>
+                        <li class="flow">
+                            <img src="/assets/icon-photography.svg" alt="" />
+                            <h3>Photography</h3>
+                            <p>
+                                Explore critical fundamentals like lighting,
+                                composition, and focus to capture exceptional
+                                photos.
+                            </p>
+                            <a href="">Get Started</a>
+                        </li>
+                        <li class="flow">
+                            <img src="/assets/icon-crypto.svg" alt="" />
+                            <h3>Crypto</h3>
+                            <p>
+                                All you need to know to get started investing in
+                                crypto. Go from beginner to advanced with this
+                                54 hour course.
+                            </p>
+                            <a href="">Get Started</a>
+                        </li>
+                        <li class="flow">
+                            <img src="/assets/icon-business.svg" alt="" />
+                            <h3>Business</h3>
+                            <p>
+                                A step-by-step playbook to help you start,
+                                scale, and sustain your business without outside
+                                investment.
+                            </p>
+                            <a href="">Get Started</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <img src="/assets/logo-dark.svg" alt="" />
+            <a href="">Get Started</a>
+        </footer>
+    </body>
+</html>
