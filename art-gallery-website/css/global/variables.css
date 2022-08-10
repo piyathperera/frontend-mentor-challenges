@@ -1,0 +1,64 @@
+:root {
+     /* Colors */
+     --color-white: hsl(0, 0%, 100%);
+     --color-almost-black: hsl(0, 0%, 8%);
+     --color-dark-grey: hsl(0, 0%, 27%);
+     --color-gold: hsl(24, 56%, 63%);
+ 
+     --color-light: var(--color-white);
+     --color-dark: var(--color-almost-black);
+     --color-accent: var(--color-gold);
+ 
+     /* Fonts */
+     --font-base: "Outfit", sans-serif;
+     --font-heading: "Big Shoulders Display", cursive;
+ 
+     /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1440,22,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+ 
+     --step--2: clamp(0.77rem, calc(0.78rem + -0.01vw), 0.78rem);
+     --step--1: clamp(0.94rem, calc(0.91rem + 0.13vw), 1.03rem);
+     --step-0: clamp(1.13rem, calc(1.05rem + 0.36vw), 1.38rem);
+     --step-1: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.83rem);
+     --step-2: clamp(1.62rem, calc(1.38rem + 1.18vw), 2.44rem);
+     --step-3: clamp(1.94rem, calc(1.57rem + 1.88vw), 3.26rem);
+     --step-4: clamp(2.33rem, calc(1.76rem + 2.87vw), 4.34rem);
+     --step-5: clamp(2.8rem, calc(1.95rem + 4.27vw), 5.79rem);
+ 
+     /* Spacing */
+     /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1440,22,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+ 
+     --space-3xs: clamp(0.31rem, calc(0.29rem + 0.09vw), 0.38rem);
+     --space-2xs: clamp(0.56rem, calc(0.53rem + 0.18vw), 0.69rem);
+     --space-xs: clamp(0.88rem, calc(0.82rem + 0.27vw), 1.06rem);
+     --space-s: clamp(1.13rem, calc(1.05rem + 0.36vw), 1.38rem);
+     --space-m: clamp(1.69rem, calc(1.58rem + 0.54vw), 2.06rem);
+     --space-l: clamp(2.25rem, calc(2.11rem + 0.71vw), 2.75rem);
+     --space-xl: clamp(3.38rem, calc(3.16rem + 1.07vw), 4.13rem);
+     --space-2xl: clamp(4.50rem, calc(4.21rem + 1.43vw), 5.50rem);
+     --space-3xl: clamp(6.75rem, calc(6.32rem + 2.14vw), 8.25rem);
+   
+     /* One-up pairs */
+     --space-3xs-2xs: clamp(0.31rem, calc(0.21rem + 0.54vw), 0.69rem);
+     --space-2xs-xs: clamp(0.56rem, calc(0.42rem + 0.71vw), 1.06rem);
+     --space-xs-s: clamp(0.88rem, calc(0.73rem + 0.71vw), 1.38rem);
+     --space-s-m: clamp(1.13rem, calc(0.86rem + 1.34vw), 2.06rem);
+     --space-m-l: clamp(1.69rem, calc(1.38rem + 1.52vw), 2.75rem);
+     --space-l-xl: clamp(2.25rem, calc(1.71rem + 2.68vw), 4.13rem);
+     --space-xl-2xl: clamp(3.38rem, calc(2.77rem + 3.04vw), 5.50rem);
+     --space-2xl-3xl: clamp(4.50rem, calc(3.43rem + 5.36vw), 8.25rem);
+   
+     /* Custom pairs */
+     --space-s-l: clamp(1.13rem, calc(0.66rem + 2.32vw), 2.75rem);
+ 
+     /* Global */
+     --gutter: var(--space-s-m);
+     --border-radius: var(--step-1);
+     --transition-base: 250ms ease;
+     --transition-movement: 200ms linear;
+     --transition-fade: 200ms ease;
+     --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+     --tracking: -0.05ch;
+     --tracking-s: -0.075ch;
+}
+   
+
