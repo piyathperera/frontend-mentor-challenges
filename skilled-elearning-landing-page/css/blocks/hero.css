@@ -1,0 +1,29 @@
+/* DEBUG */
+* {
+    outline: 1px solid hotpink;
+}
+/* END DEBUG */
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+.hero-content h1 {
+    font-weight: 800;
+    max-width: 14ch;
+}
+
+.hero-content p {
+    max-width: 32ch;
+}
+
+.hero-content a {
+    display: inline-block;
+}
+
+.hero img {
+    object-fit: cover;
+}
+

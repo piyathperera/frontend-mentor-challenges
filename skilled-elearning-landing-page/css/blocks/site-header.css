@@ -1,0 +1,8 @@
+.site-header {
+    --region-space: var(--space-s-m);
+}
+
+.site-header nav {
+    display: flex;
+    justify-content: space-between;
+}

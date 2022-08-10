@@ -1,0 +1,12 @@
+:is(.courses) h2, h3 {
+    font-weight: 700;
+}
+
+.courses a {
+    display: inline-block;
+}
+
+.courses ul {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 50vw, 24rem);
+}
