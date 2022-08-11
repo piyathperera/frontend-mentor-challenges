@@ -11,3 +11,5 @@
 @import 'blocks/site-header.css';
 @import 'blocks/hero.css';
 @import 'blocks/courses.css';
+
+@import 'exceptions/wrapper.css';
