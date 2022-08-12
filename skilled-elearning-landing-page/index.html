@@ -18,14 +18,46 @@
         <title>Vite App</title>
     </head>
     <body>
+        <!-- <header class="site-header region">
+            <nav class="wrapper">
+                <a href="#logo">Skilled</a>
+                <a href="" class="button">Get Started</a>
+            </nav>
+
+            <article class="hero region wrapper" data-wrapper="left">
+              <div class="hero-content flow">
+                  <h1>Maximize skill, minimize budget</h1>
+                  <p>
+                      Our modern courses across a range of in-demand skills
+                      will give you the knowledge you need to live the life
+                      you want.
+                  </p>
+                  <a href="" class="button">Get Started</a>
+              </div>
+
+              <picture>
+                  <source
+                      srcset="/assets/image-hero-desktop.png"
+                      media="(min-width: 800px)"
+                  />
+                  <source
+                      srcset="/assets/image-hero-tablet.png"
+                      media="(min-width: 650px)"
+                  />
+                  <img src="/assets/image-hero-mobile.png" alt="MDN Web Docs" />
+              </picture>
+          </article>
+        </header> -->
+
         <header class="site-header region">
             <nav class="wrapper">
                 <a href="#logo">Skilled</a>
                 <a href="" class="button">Get Started</a>
             </nav>
         </header>
+
         <main>
-            <article class="hero region wrapper">
+            <article class="hero region wrapper" data-wrapper="left">
                 <div class="hero-content flow">
                     <h1>Maximize skill, minimize budget</h1>
                     <p>
@@ -36,21 +68,31 @@
                     <a href="" class="button">Get Started</a>
                 </div>
 
-                <!-- <img
-                        src="/assets/image-hero-desktop.png"
-                        alt=""
-                    /> -->
-
                 <picture>
                     <source
-                        srcset="/assets/image-hero-desktop.png"
+                        srcset="/assets/image-hero-desktop.png, /assets/image-hero-desktop@2x.png 2x"
                         media="(min-width: 800px)"
                     />
                     <source
-                        srcset="/assets/image-hero-tablet.png"
-                        media="(min-width: 600px)"
+                        srcset="/assets/image-hero-desktop.webp, /assets/image-hero-desktop@2x.webp 2x" type="image/webp"
+                        media="(min-width: 800px)"
                     />
-                    <img src="/assets/image-hero-mobile.png" alt="MDN Web Docs" />
+                    <source
+                        srcset="/assets/image-hero-tablet.png, /assets/image-hero-tablet@2x.png 2x"
+                        media="(min-width: 650px)"
+                    />
+                    <source
+                        srcset="/assets/image-hero-tablet.webp, /assets/image-hero-tablet@2x.webp 2x" type="image/webp"
+                        media="(min-width: 650px)"
+                    />
+                    <source
+                        srcset="/assets/image-hero-mobile.webp, /assets/image-hero-mobile@2x.webp 2x" type="image/webp"
+                    />
+                    <img
+                        src="/assets/image-hero-mobile.png"
+                        srcset="/assets/image-hero-mobile@2x.png"
+                        alt="hero image"
+                    />
                 </picture>
             </article>
 
@@ -113,7 +155,7 @@
                 </div>
             </article>
         </main>
-        <footer>
+        <footer class="footer wrapper">
             <img src="/assets/logo-dark.svg" alt="" />
             <a href="">Get Started</a>
         </footer>
