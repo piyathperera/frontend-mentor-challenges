@@ -1,5 +1,7 @@
 .site-header {
     --region-space: var(--space-s-m);
+    z-index: 0;
+    background: lightblue;
 }
 
 .site-header nav {

@@ -1,0 +1,11 @@
+/* header {
+    display: grid;
+    grid-template-areas: "hero";
+    align-items: center;
+    
+}
+
+header > * {
+    grid-area: hero;
+    
+} */
