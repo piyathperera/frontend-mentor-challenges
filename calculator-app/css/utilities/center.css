@@ -1,0 +1,12 @@
+.center {
+    box-sizing: content-box;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--s1);
+    padding-right: var(--s1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
