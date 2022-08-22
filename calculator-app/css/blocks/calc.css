@@ -1,0 +1,21 @@
+.calc {
+    /* height: 100vh; */
+    background-color: lightblue;
+}
+
+.calc-header {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightcoral;
+}
+
+.calc-header legend {
+    float: left;
+    margin-right: 1rem;
+}
+
+.calc-header label {
+    float: top;
+}

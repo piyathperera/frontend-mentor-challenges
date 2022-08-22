@@ -1,0 +1,21 @@
+/* .calc-theme [role="switch"][aria-checked="true"] :first-child, 
+.calc-theme [role="switch"][aria-checked="false"] :last-child {
+  background: #000;
+  color: #fff;
+} */
+
+.calc-theme {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.theme-labels, .theme-radios {
+    display: flex;
+    justify-content: space-around;
+}
+
+.theme-radios {
+    background-color: lightseagreen;
+    border-radius: 50px;
+}

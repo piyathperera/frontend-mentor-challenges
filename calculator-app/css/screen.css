@@ -10,5 +10,8 @@
 @import 'compositions/grid.css';
 
 @import 'blocks/grid-calc-buttons.css';
+@import 'blocks/calc-wrapper.css';
+@import 'blocks/calc.css';
+@import 'blocks/calc-theme.css';
 
 @import 'exceptions/wrapper.css';
