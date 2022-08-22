@@ -1,0 +1,27 @@
+:root {
+    /* colors */
+    --color-primary: hsl(212, 100%, 50%);
+    --color-on-primary: hsl(0, 0%, 100%);
+
+    --color-secondary: hsl(217, 21%, 21%);
+
+    --color-tertiary: hsl(217, 35%, 45%);
+
+    --color-surface: hsl(0, 0%, 100%);
+    --color-on-surface: hsl(217, 20%, 51%);
+    --color-surface-dark: hsl(222, 41%, 20%);
+    --color-on-surface-dark: hsl(0, 0%, 100%);
+
+    --color-background: hsl(227, 100%, 98%);
+    --color-on-background: hsl(217, 20%, 51%);
+    --color-background-dark: hsl(220, 40%, 13%);
+    --color-on-background-dark: hsl(0, 0%, 100%);
+    
+    /* fonts */
+    --font-base: 'Space Mono', monospace;
+
+    /* spacing */
+    
+
+    /* global */
+}
