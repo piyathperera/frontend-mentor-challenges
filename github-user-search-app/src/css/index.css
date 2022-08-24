@@ -8,3 +8,5 @@
 
 @import './compositions/center.css';
 @import './compositions/grid.css';
+
+@import './blocks/header.css';
