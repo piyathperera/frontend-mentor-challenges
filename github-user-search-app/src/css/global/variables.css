@@ -7,12 +7,12 @@
 
     --color-tertiary: hsl(217, 35%, 45%);
 
-    --color-surface: hsl(0, 0%, 100%);
+    --color-surface: hsl(227, 100%, 98%);
     --color-on-surface: hsl(217, 20%, 51%);
     --color-surface-dark: hsl(222, 41%, 20%);
     --color-on-surface-dark: hsl(0, 0%, 100%);
 
-    --color-background: hsl(227, 100%, 98%);
+    --color-background: hsl(0, 0%, 100%);
     --color-on-background: hsl(217, 20%, 51%);
     --color-background-dark: hsl(220, 40%, 13%);
     --color-on-background-dark: hsl(0, 0%, 100%);
